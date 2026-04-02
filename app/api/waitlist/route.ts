@@ -1,7 +1,10 @@
 import { NextResponse } from 'next/server'
 import { z } from 'zod'
 
-// Temporary in-memory storage (replace with Supabase later)
+// Will migrate to proper storage later
+import { auth } from '@/lib/auth'
+
+// Temporary in-memory storage (replace with auth system later)
 let waitlistEmails: string[] = []
 
 const emailSchema = z.string().email()
