@@ -1,7 +1,7 @@
-import { Badge } from '@components/ui/badge'
-import { SectionContainer } from '@components/ui/section-container'
-import { Card } from '@components/ui/card'
-import { Button } from '@components/ui/button'
+import { Badge } from '@/components/ui/badge'
+import { SectionContainer } from '@/components/ui/section-container'
+import { Card } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
 
 const steps = [
   { 

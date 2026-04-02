@@ -1,6 +1,6 @@
-import { Badge } from '@components/ui/badge'
-import { SectionContainer } from '@components/ui/section-container'
-import { Card } from '@components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { SectionContainer } from '@/components/ui/section-container'
+import { Card } from '@/components/ui/card'
 
 export function ProductSection() {
   return (

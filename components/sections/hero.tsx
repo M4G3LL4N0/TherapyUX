@@ -1,5 +1,5 @@
-import { Button } from '@components/ui/button'
-import { SectionContainer } from '@components/ui/section-container'
+import { Button } from '@/components/ui/button'
+import { SectionContainer } from '@/components/ui/section-container'
 
 export function HeroSection() {
   return (
