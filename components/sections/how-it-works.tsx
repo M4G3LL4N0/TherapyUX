@@ -1,6 +1,6 @@
-import { Badge } from '../ui/badge'
-import { SectionContainer } from '../ui/section-container'
-import { Card } from '../ui/card'
+import { Badge } from '@components/ui/badge'
+import { SectionContainer } from '@components/ui/section-container'
+import { Card } from '@components/ui/card'
 
 const steps = [
   { num: 1, title: "Sign Up", desc: "Join our waitlist to get early access" },

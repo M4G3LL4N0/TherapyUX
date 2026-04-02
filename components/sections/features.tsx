@@ -1,6 +1,6 @@
-import { Badge } from '../ui/badge'
-import { Card } from '../ui/card'
-import { SectionContainer } from '../ui/section-container'
+import { Badge } from '@components/ui/badge'
+import { Card } from '@components/ui/card'
+import { SectionContainer } from '@components/ui/section-container'
 
 const features = [
   {
