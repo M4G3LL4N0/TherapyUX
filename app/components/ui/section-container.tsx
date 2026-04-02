@@ -16,11 +16,13 @@ export function SectionContainer({ children, className, id }: SectionContainerPr
       )}
       style={{
         scrollSnapAlign: 'start',
-        scrollSnapStop: 'normal'
+        scrollSnapStop: 'normal',
+        scrollMarginTop: '80px'
       }}
     >
       <div className="px-4 mx-auto max-w-7xl relative">
         <div className="absolute inset-x-0 -top-16 h-32 bg-gradient-to-b from-transparent to-white/50 dark:to-zinc-900/50 pointer-events-none" />
+        <div className="absolute inset-x-0 -bottom-16 h-32 bg-gradient-to-t from-transparent to-white/50 dark:to-zinc-900/50 pointer-events-none" />
         {children}
       </div>
     </section>

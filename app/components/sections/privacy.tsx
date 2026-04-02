@@ -10,7 +10,7 @@ export function PrivacySection() {
           Privacy First
         </Badge>
         <h2 className="text-4xl font-bold tracking-tight sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
-          Military-Grade Privacy
+          Bank-Grade Security
         </h2>
         <p className="mt-6 text-xl leading-8 text-zinc-600 dark:text-zinc-300 max-w-2xl mx-auto">
           Your mental health data belongs to you - we've built our system to keep it that way.
@@ -25,7 +25,7 @@ export function PrivacySection() {
             </div>
             <h3 className="text-xl font-semibold">Zero-Trust Design</h3>
             <p className="text-zinc-600 dark:text-zinc-300">
-              Built with zero-trust architecture, we never access your data without explicit consent.
+              Built with bank-grade security protocols, we maintain zero-trust architecture and never access your data without explicit consent.
             </p>
           </div>
         </Card>

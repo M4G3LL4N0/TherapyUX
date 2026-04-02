@@ -37,6 +37,12 @@ export function HeroSection() {
               Learn More →
             </Button>
           </div>
+          <div className="mt-6 flex justify-center gap-4">
+            <span className="text-sm text-zinc-500 dark:text-zinc-400">Backed by:</span>
+            <div className="flex gap-3">
+              {/* Add investor logos here */}
+            </div>
+          </div>
           <p className="mt-4 text-sm text-zinc-500 dark:text-zinc-400">
             Trusted by leading mental health professionals
           </p>

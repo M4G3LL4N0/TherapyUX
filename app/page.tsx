@@ -12,7 +12,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-zinc-50 to-white dark:from-zinc-900 dark:to-black" style={{
       scrollBehavior: 'smooth',
-      scrollSnapType: 'y mandatory'
+      scrollSnapType: 'y mandatory',
+      scrollPaddingTop: '80px'
     }}>
       <Header />
       <main className="flex flex-col">
