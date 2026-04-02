@@ -10,10 +10,10 @@ export function FeaturesSection() {
           Features
         </Badge>
         <h2 className="text-4xl font-bold tracking-tight sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
-          Designed for Better Outcomes
+          Precision Mental Health
         </h2>
         <p className="mt-6 text-xl leading-8 text-zinc-600 dark:text-zinc-300 max-w-2xl mx-auto">
-          Our platform combines clinical expertise with intuitive design to create therapeutic experiences that work.
+          Clinical-grade tools that adapt to your unique emotional patterns - private, intelligent, and always in your control.
         </p>
       </div>
 
@@ -23,9 +23,9 @@ export function FeaturesSection() {
             <div className="w-12 h-12 rounded-lg bg-blue-50 dark:bg-blue-900/50 flex items-center justify-center">
               {/* Icon */}
             </div>
-            <h3 className="text-xl font-semibold">Personalized Therapy</h3>
+            <h3 className="text-xl font-semibold">Adaptive Intelligence</h3>
             <p className="text-zinc-600 dark:text-zinc-300">
-              Tailored interventions based on individual needs and progress.
+              Our AI learns your emotional patterns to provide precise, personalized support.
             </p>
           </div>
         </Card>

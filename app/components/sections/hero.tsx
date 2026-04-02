@@ -24,10 +24,10 @@ export function HeroSection() {
           className="max-w-3xl mx-auto text-center"
         >
           <h1 className="text-5xl font-bold tracking-tight text-balance md:text-6xl lg:text-7xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-400 to-pink-400 dark:from-blue-300 dark:via-purple-200 dark:to-pink-200">
-            Revolutionizing Therapy<br className="hidden md:block" /> Through Design
+            Emotional Intelligence<br className="hidden md:block" /> Redefined
           </h1>
           <p className="mt-8 text-xl leading-8 text-zinc-600 dark:text-zinc-300 max-w-2xl mx-auto">
-            TherapyUX combines clinical expertise with beautiful interfaces to create therapeutic experiences that actually work.
+            Precision mental health tools that adapt to you - private, intelligent, and always in your control.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
             <Button variant="primary" size="lg">

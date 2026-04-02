@@ -44,10 +44,10 @@ export function WaitlistSection() {
     <SectionContainer id="waitlist" className="bg-gradient-to-b from-white/50 to-white/20 dark:from-zinc-900/50 dark:to-zinc-900/20 backdrop-blur-lg">
       <div className="max-w-2xl mx-auto text-center">
         <h2 className="text-4xl font-bold tracking-tight sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
-          Join the Waitlist
+          Take Control of Your Mental Health
         </h2>
         <p className="mt-6 text-xl leading-8 text-zinc-600 dark:text-zinc-300">
-          Be the first to experience TherapyUX when we launch.
+          Join the waitlist for private, intelligent mental health tools that adapt to you.
         </p>
 
         <form onSubmit={handleSubmit} className="mt-10 flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
