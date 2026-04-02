@@ -9,10 +9,10 @@ export function FeaturesSection() {
         <Badge variant="primary" className="mb-4">
           Features
         </Badge>
-        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+        <h2 className="text-4xl font-bold tracking-tight sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
           Designed for Better Outcomes
         </h2>
-        <p className="mt-4 text-lg text-zinc-600 dark:text-zinc-300 max-w-2xl mx-auto">
+        <p className="mt-6 text-xl leading-8 text-zinc-600 dark:text-zinc-300 max-w-2xl mx-auto">
           Our platform combines clinical expertise with intuitive design to create therapeutic experiences that work.
         </p>
       </div>

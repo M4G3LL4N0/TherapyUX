@@ -3,13 +3,13 @@ import { forwardRef } from 'react'
 import { cn } from '@/lib/utils'
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center rounded-full text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background',
+  'inline-flex items-center justify-center rounded-full text-sm font-medium transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background',
   {
     variants: {
       variant: {
-        primary: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-purple-700',
-        secondary: 'border border-zinc-300 dark:border-zinc-600 bg-white/50 dark:bg-zinc-800/50 text-zinc-900 dark:text-zinc-100 hover:bg-zinc-100/70 dark:hover:bg-zinc-700/50',
-        glass: 'bg-white/20 dark:bg-zinc-800/20 backdrop-blur-md border border-white/30 dark:border-zinc-700 text-zinc-900 dark:text-zinc-100 hover:bg-white/30 dark:hover:bg-zinc-800/30'
+        primary: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-xl hover:shadow-2xl hover:brightness-110 active:scale-[0.98] active:brightness-95',
+        secondary: 'bg-white/10 dark:bg-black/10 backdrop-blur-md border border-white/20 dark:border-zinc-800 text-zinc-900 dark:text-zinc-100 hover:bg-white/20 dark:hover:bg-black/20 hover:border-white/30 active:scale-[0.98]',
+        glass: 'bg-white/20 dark:bg-zinc-900/20 backdrop-blur-md border border-white/30 dark:border-zinc-800 text-zinc-900 dark:text-zinc-100 hover:bg-white/30 dark:hover:bg-zinc-900/30 hover:border-white/40 active:scale-[0.98]'
       },
       size: {
         sm: 'h-9 px-4 py-2',
