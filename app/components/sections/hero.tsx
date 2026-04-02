@@ -5,13 +5,13 @@ import { Button } from '../ui/button'
 
 export function HeroSection() {
   return (
-    <section className="relative w-full py-24 md:py-32 lg:py-40">
+    <SectionContainer className="relative">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-100/20 via-purple-100/20 to-pink-100/20 dark:from-blue-900/10 dark:via-purple-900/10 dark:to-pink-900/10" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-transparent via-transparent to-white/80 dark:to-black/80" />
       </div>
 
-      <div className="container relative z-10 px-4 mx-auto">
+      <div className="relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
