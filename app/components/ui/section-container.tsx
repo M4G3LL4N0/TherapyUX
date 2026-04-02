@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils'
 
-interface SectionContainerProps {
+export interface SectionContainerProps {
   children: React.ReactNode
   className?: string
   id?: string
