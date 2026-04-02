@@ -59,6 +59,8 @@ export function WaitlistSection() {
             required
             disabled={loading || success}
             className="flex-1"
+            aria-label="Email address"
+            aria-describedby="waitlist-description"
           />
           <Button
             type="submit"

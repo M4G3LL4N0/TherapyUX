@@ -11,11 +11,11 @@ export function SectionContainer({ children, className, id }: SectionContainerPr
     <section 
       id={id}
       className={cn(
-        'py-24 md:py-32 lg:py-40',
+        'py-20 md:py-28 lg:py-36',
         className
       )}
     >
-      <div className="container px-4 mx-auto max-w-7xl">
+      <div className="px-4 mx-auto max-w-7xl">
         {children}
       </div>
     </section>
