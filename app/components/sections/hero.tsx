@@ -28,14 +28,18 @@ export function HeroSection() {
           <p className="mt-8 text-xl leading-8 text-zinc-600 dark:text-zinc-300 max-w-2xl mx-auto">
             Precision mental health tools that adapt to you - private, intelligent, and always in your control.
           </p>
-          <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-            <Button variant="primary" size="lg">
-              Join Waitlist
+          <div className="mt-12 flex flex-col sm:flex-row justify-center gap-4">
+            <Button variant="primary" size="lg" className="relative">
+              <span className="relative z-10">Join Waitlist</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-sm animate-pulse" />
             </Button>
             <Button variant="secondary" size="lg">
-              Learn More
+              Learn More →
             </Button>
           </div>
+          <p className="mt-4 text-sm text-zinc-500 dark:text-zinc-400">
+            Trusted by leading mental health professionals
+          </p>
         </motion.div>
       </div>
     </section>

@@ -10,7 +10,7 @@ export function FeaturesSection() {
           Features
         </Badge>
         <h2 className="text-4xl font-bold tracking-tight sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
-          Precision Mental Health
+          Clinical-Grade Precision
         </h2>
         <p className="mt-6 text-xl leading-8 text-zinc-600 dark:text-zinc-300 max-w-2xl mx-auto">
           Clinical-grade tools that adapt to your unique emotional patterns - private, intelligent, and always in your control.
@@ -25,7 +25,7 @@ export function FeaturesSection() {
             </div>
             <h3 className="text-xl font-semibold">Adaptive Intelligence</h3>
             <p className="text-zinc-600 dark:text-zinc-300">
-              Our AI learns your emotional patterns to provide precise, personalized support.
+              Developed with leading psychologists, our AI adapts to your unique emotional patterns with clinical precision.
             </p>
           </div>
         </Card>

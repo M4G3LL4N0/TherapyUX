@@ -10,7 +10,7 @@ export function PrivacySection() {
           Privacy First
         </Badge>
         <h2 className="text-4xl font-bold tracking-tight sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
-          Privacy by Architecture
+          Military-Grade Privacy
         </h2>
         <p className="mt-6 text-xl leading-8 text-zinc-600 dark:text-zinc-300 max-w-2xl mx-auto">
           Your mental health data belongs to you - we've built our system to keep it that way.
@@ -25,7 +25,7 @@ export function PrivacySection() {
             </div>
             <h3 className="text-xl font-semibold">Zero-Trust Design</h3>
             <p className="text-zinc-600 dark:text-zinc-300">
-              We never store or access your data without explicit consent.
+              Built with zero-trust architecture, we never access your data without explicit consent.
             </p>
           </div>
         </Card>
