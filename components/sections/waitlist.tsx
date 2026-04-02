@@ -6,26 +6,53 @@ import { Input } from '@components/ui/input'
 import { SectionContainer } from '@components/ui/section-container'
 import { toast } from 'sonner'
 import { useState } from 'react'
+import { z } from 'zod'
+
+const emailSchema = z.string().email()
 
 export function WaitlistSection() {
   const [email, setEmail] = useState('')
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
+    
+    // Client-side validation
+    try {
+      emailSchema.parse(email)
+      setError(null)
+    } catch {
+      setError('Please enter a valid email address')
+      return
+    }
+
     setLoading(true)
     
     try {
-      await fetch('/api/waitlist', {
+      const response = await fetch('/api/waitlist', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
       })
+
+      if (!response.ok) {
+        const data = await response.json()
+        throw new Error(data.error || 'Something went wrong')
+      }
+
       setSuccess(true)
       toast.success('You have been added to our waitlist!')
+      setEmail('')
     } catch (error) {
-      toast.error('Something went wrong. Please try again.')
+      if (error instanceof Error) {
+        toast.error(error.message)
+        setError(error.message)
+      } else {
+        toast.error('Something went wrong. Please try again.')
+        setError('Something went wrong. Please try again.')
+      }
     } finally {
       setLoading(false)
     }
@@ -45,19 +72,29 @@ export function WaitlistSection() {
         </p>
 
         <form onSubmit={handleSubmit} className="mt-10 flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-          <Input
-            type="email"
-            placeholder="Enter your email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            disabled={loading || success}
-            className="flex-1"
-            aria-label="Email address"
-          />
+          <div className="flex-1 relative">
+            <Input
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value)
+                setError(null)
+              }}
+              required
+              disabled={loading || success}
+              className="w-full"
+              aria-label="Email address"
+            />
+            {error && (
+              <p className="absolute -bottom-5 left-0 text-sm text-red-500">
+                {error}
+              </p>
+            )}
+          </div>
           <Button
             type="submit"
-            variant="default"
+            variant="primary"
             disabled={loading || success}
             className="whitespace-nowrap"
           >
