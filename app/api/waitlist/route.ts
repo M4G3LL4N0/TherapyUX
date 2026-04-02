@@ -1,15 +1,18 @@
 import { NextResponse } from 'next/server'
 import { z } from 'zod'
 
-// Will migrate to proper storage later
-import { auth } from '@/lib/auth'
-
-// Temporary in-memory storage (replace with auth system later)
+// Temporary in-memory storage
 let waitlistEmails: string[] = []
 
 const emailSchema = z.string().email()
 
 export async function POST(request: Request) {
+  if (request.method !== 'POST') {
+    return NextResponse.json(
+      { error: 'Method not allowed' },
+      { status: 405 }
+    )
+  }
   try {
     const { email } = await request.json()
     

@@ -73,7 +73,11 @@ export function WaitlistSection() {
 
         <form onSubmit={handleSubmit} className="mt-10 flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
           <div className="flex-1 relative">
+            <label htmlFor="waitlist-email" className="sr-only">
+              Email address
+            </label>
             <Input
+              id="waitlist-email"
               type="email"
               placeholder="Enter your email"
               value={email}
@@ -84,7 +88,7 @@ export function WaitlistSection() {
               required
               disabled={loading || success}
               className="w-full"
-              aria-label="Email address"
+              aria-describedby="waitlist-error"
             />
             {error && (
               <p className="absolute -bottom-5 left-0 text-sm text-red-500">

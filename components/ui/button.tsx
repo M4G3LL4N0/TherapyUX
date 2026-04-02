@@ -29,13 +29,18 @@ export interface ButtonProps
     VariantProps<typeof buttonVariants> {}
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, ...props }, ref) => {
+  ({ className, variant, size, children, ...props }, ref) => {
     return (
       <button
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         {...props}
-      />
+      >
+        <span className="sr-only">{children}</span>
+        <span aria-hidden="true">
+          {children}
+        </span>
+      </button>
     )
   }
 )
