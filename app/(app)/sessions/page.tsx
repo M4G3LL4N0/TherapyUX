@@ -1,41 +1,40 @@
 import { Card } from "@/components/ui/card"
-import { cn } from "@/lib/utils"
 import { Icons } from "@/components/ui/icons"
+import { mockSessions } from "@/types/session"
+import Link from "next/link"
+import { EmptyState } from "@/components/sessions/empty-state"
+import { SessionCard } from "@/components/sessions/session-card"
+import { Button } from "@/components/ui/button"
 
 export default function SessionsPage() {
   return (
     <div className="space-y-6">
-      <h1 className="text-2xl font-semibold">Session History</h1>
-      
-      <Card className="p-6">
-        <div className="space-y-4">
-          <div className="flex items-center justify-between rounded-lg p-4 hover:bg-white/5">
-            <div className="flex items-center gap-4">
-              <Icons.session className="h-5 w-5 text-emerald-400" />
-              <div>
-                <h3 className="font-medium">Morning Reflection</h3>
-                <p className="text-sm text-white/80">April 1, 2026</p>
-              </div>
-            </div>
-            <button className="text-sm font-medium text-emerald-400 hover:text-emerald-300">
-              Review
-            </button>
-          </div>
-          
-          <div className="flex items-center justify-between rounded-lg p-4 hover:bg-white/5">
-            <div className="flex items-center gap-4">
-              <Icons.session className="h-5 w-5 text-emerald-400" />
-              <div>
-                <h3 className="font-medium">Evening Wind Down</h3>
-                <p className="text-sm text-white/80">March 31, 2026</p>
-              </div>
-            </div>
-            <button className="text-sm font-medium text-emerald-400 hover:text-emerald-300">
-              Review
-            </button>
-          </div>
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-2xl font-semibold">Session History</h1>
+          <p className="text-sm text-white/80">
+            Review your past therapy sessions and progress
+          </p>
         </div>
-      </Card>
+        <Button asChild>
+          <Link href="/app/sessions/new">
+            <Icons.plus className="mr-2 h-4 w-4" />
+            New Session
+          </Link>
+        </Button>
+      </div>
+
+      {mockSessions.length === 0 ? (
+        <EmptyState />
+      ) : (
+        <Card className="p-6">
+          <div className="space-y-4">
+            {mockSessions.map((session) => (
+              <SessionCard key={session.id} session={session} />
+            ))}
+          </div>
+        </Card>
+      )}
     </div>
   )
 }

@@ -297,5 +297,28 @@ export function Icons() {
         <polyline points="12 5 19 12 12 19" />
       </svg>
     ),
+    emergency: (props: SVGProps<SVGSVGElement>) => (
+      <svg
+        {...props}
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M12 2v4" />
+        <path d="m16 6 3 3" />
+        <path d="M18 12h4" />
+        <path d="m16 18 3-3" />
+        <path d="M12 22v-4" />
+        <path d="m8 18-3 3" />
+        <path d="M6 12H2" />
+        <path d="m8 6-3-3" />
+      </svg>
+    ),
   }
 }
