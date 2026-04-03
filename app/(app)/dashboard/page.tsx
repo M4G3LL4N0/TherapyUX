@@ -1,17 +1,31 @@
-import { RecoveryModes } from "@/components/dashboard/recovery-modes"
-import { SessionOverview } from "@/components/dashboard/session-overview"
-import { WeeklyProgress } from "@/components/dashboard/weekly-progress"
+import { WelcomeHeader } from "@/components/dashboard/welcome-header"
+import { DailyStatus } from "@/components/dashboard/daily-status"
+import { RecentSessions } from "@/components/dashboard/recent-sessions"
+import { ActiveModes } from "@/components/dashboard/active-modes"
+import { QuickActions } from "@/components/dashboard/quick-actions"
+import { PrivacyStatus } from "@/components/dashboard/privacy-status"
+import { EmotionalMetrics } from "@/components/dashboard/emotional-metrics"
+import { RecoveryStreak } from "@/components/dashboard/recovery-streak"
 
 export default function DashboardPage() {
   return (
-    <div className="space-y-8">
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-        <div className="lg:col-span-2">
-          <SessionOverview />
+    <div className="space-y-6">
+      <WelcomeHeader />
+      
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+        <div className="lg:col-span-2 space-y-6">
+          <DailyStatus />
+          <RecentSessions />
+          <ActiveModes />
         </div>
-        <WeeklyProgress />
+        
+        <div className="space-y-6">
+          <QuickActions />
+          <PrivacyStatus />
+          <EmotionalMetrics />
+          <RecoveryStreak />
+        </div>
       </div>
-      <RecoveryModes />
     </div>
   )
 }
