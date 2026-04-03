@@ -9,12 +9,10 @@ export function Card({
 }) {
   return (
     <div
-      className={`relative rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl transition-all hover:border-primary/30 hover:bg-primary/5 ${className}`}
+      className={`relative rounded-2xl border border-white/5 bg-gradient-to-b from-white/5 to-white/[0.01] p-6 backdrop-blur-2xl transition-all hover:border-emerald-400/20 hover:shadow-[0_0_20px_-5px_rgba(0,255,159,0.1)] ${className}`}
     >
+      <div className="absolute inset-0 -z-10 rounded-2xl bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-emerald-900/10 via-transparent to-transparent opacity-50" />
       {children}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent"></div>
-      </div>
     </div>
   )
 }

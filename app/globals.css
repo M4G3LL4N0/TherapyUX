@@ -7,9 +7,17 @@
   --primary-hover: #00e68f;
   --secondary: #1a1a2e;
   --muted: #a0a0a0;
-  --border: rgba(255, 255, 255, 0.1);
-  --glass: rgba(255, 255, 255, 0.05);
-  --glow: radial-gradient(circle at center, rgba(0, 255, 159, 0.15) 0%, transparent 70%);
+  --border: rgba(255, 255, 255, 0.08);
+  --glass: rgba(255, 255, 255, 0.03);
+  --glow: radial-gradient(ellipse at center, rgba(0, 255, 159, 0.1) 0%, transparent 70%);
+  --space-unit: 1rem;
+  --space-xxs: calc(0.25 * var(--space-unit));
+  --space-xs: calc(0.5 * var(--space-unit));
+  --space-sm: calc(0.75 * var(--space-unit));
+  --space-md: calc(1.25 * var(--space-unit));
+  --space-lg: calc(2 * var(--space-unit));
+  --space-xl: calc(3.25 * var(--space-unit));
+  --space-xxl: calc(5.25 * var(--space-unit));
 }
 
 @theme inline {

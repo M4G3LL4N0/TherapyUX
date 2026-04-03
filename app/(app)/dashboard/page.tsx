@@ -9,21 +9,23 @@ import { RecoveryStreak } from "@/components/dashboard/recovery-streak"
 
 export default function DashboardPage() {
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       <WelcomeHeader />
       
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
-        <div className="lg:col-span-2 space-y-6">
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <div className="lg:col-span-2 space-y-8">
           <DailyStatus />
           <RecentSessions />
           <ActiveModes />
         </div>
         
-        <div className="space-y-6">
+        <div className="space-y-8">
           <QuickActions />
-          <PrivacyStatus />
-          <EmotionalMetrics />
-          <RecoveryStreak />
+          <div className="space-y-6">
+            <PrivacyStatus />
+            <EmotionalMetrics />
+            <RecoveryStreak />
+          </div>
         </div>
       </div>
     </div>
