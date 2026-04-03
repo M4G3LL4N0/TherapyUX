@@ -1,16 +1,16 @@
-import { Card } from "@/components/ui/card"
-import { cn } from "@/lib/utils"
+import { RecoveryMap } from "@/components/recovery-map/recovery-map"
 
 export default function RecoveryMapPage() {
   return (
-    <div className="space-y-6">
-      <h1 className="text-2xl font-semibold">Recovery Map</h1>
-      
-      <Card className="p-6">
-        <div className="h-96 rounded-lg bg-white/5">
-          {/* Map visualization will go here */}
-        </div>
-      </Card>
+    <div className="space-y-8">
+      <div className="space-y-2">
+        <h1 className="text-2xl font-semibold">Recovery Map</h1>
+        <p className="text-sm text-white/60">
+          Your psychological landscape - track patterns and progress across therapy dimensions
+        </p>
+      </div>
+
+      <RecoveryMap />
     </div>
   )
 }
