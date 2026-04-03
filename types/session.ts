@@ -1,31 +1,42 @@
+export type SessionType = 'guided' | 'journal' | 'emergency' | 'check-in'
+
+export interface EmotionalState {
+  mood: number // 1-10
+  stress: number // 1-10
+  energy: number // 1-10
+}
+
+export interface Intervention {
+  type: string
+  steps: string[]
+  duration?: number
+}
+
+export interface SessionOutcome {
+  improvement: number // 1-10
+  notes: string
+  insights?: string[]
+}
+
 export interface Session {
   id: string
-  type: 'guided' | 'journal' | 'emergency' | 'check-in'
+  type: SessionType
   modeId?: string
   startedAt: Date
   duration: number // in minutes
   summary: string
-  emotionalState: {
-    mood: number // 1-10
-    stress: number // 1-10
-    energy: number // 1-10
-  }
+  emotionalState: EmotionalState
   trigger?: string
   thoughtPattern?: string
-  intervention?: {
-    type: string
-    steps: string[]
-  }
-  outcome?: {
-    improvement: number // 1-10
-    notes: string
-  }
+  intervention?: Intervention
+  outcome?: SessionOutcome
   nextStep?: string
+  transcript?: string // For future AI integration
 }
 
 export const mockSessions: Session[] = [
   {
-    id: '1',
+    id: 'sess_01H9J5WX3Q',
     type: 'guided',
     modeId: 'panic',
     startedAt: new Date('2026-04-01T09:30:00'),
@@ -43,16 +54,21 @@ export const mockSessions: Session[] = [
       steps: [
         '4-7-8 breathing exercise',
         '5 senses grounding technique'
-      ]
+      ],
+      duration: 8
     },
     outcome: {
       improvement: 6,
-      notes: 'Significant reduction in physical anxiety symptoms'
+      notes: 'Significant reduction in physical anxiety symptoms',
+      insights: [
+        'Tendency to catastrophize under pressure',
+        'Breathing exercises are particularly effective'
+      ]
     },
     nextStep: 'Schedule follow-up session tomorrow'
   },
   {
-    id: '2',
+    id: 'sess_01H9J5WX3R',
     type: 'journal',
     startedAt: new Date('2026-03-31T20:15:00'),
     duration: 10,
