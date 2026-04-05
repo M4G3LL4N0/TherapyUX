@@ -55,23 +55,26 @@ const triggerClustersRaw = [
 
 const recoveryPatternsRaw = [
   {
-    id: "pattern-1",
+    id: "pattern-1", 
     title: "Faster stabilization",
-    description: "Returning to baseline quicker.",
-    trend: "up",
+    description: "Returning to baseline quicker",
+    trending: "up",
+    dataPoints: 12
   },
   {
     id: "pattern-2",
-    title: "Less catastrophic story-building",
-    description: "Negative interpretation loops are losing intensity.",
-    trend: "up",
+    title: "Less catastrophic thinking", 
+    description: "Negative interpretation loops are losing intensity",
+    trending: "up",
+    dataPoints: 8
   },
   {
     id: "pattern-3",
-    title: "Relationship sensitivity remains elevated",
-    description: "Attachment-related triggers still create instability.",
-    trend: "down",
-  },
+    title: "Relationship sensitivity",
+    description: "Attachment triggers still create instability",
+    trending: "down", 
+    dataPoints: 15
+  }
 ]
 
 const recoveryFocusRaw = {

@@ -22,17 +22,54 @@ export interface Session {
   id: string
   type: SessionType
   modeId?: string
-  startedAt: Date
+  title?: string
+  createdAt: Date
   duration: number // in minutes
   summary: string
   emotionalState: EmotionalState
+  state?: EmotionalState // alias for emotionalState
   trigger?: string
   thoughtPattern?: string
   intervention?: Intervention
   outcome?: SessionOutcome
   nextStep?: string
-  transcript?: string // For future AI integration
 }
+
+export const mockSessions: Session[] = [
+  {
+    id: 'sess_01H9J5WX3Q',
+    type: 'guided',
+    modeId: 'panic',
+    title: 'Morning anxiety relief session',
+    createdAt: new Date('2026-04-01T09:30:00'),
+    duration: 15,
+    summary: 'Controlled morning anxiety symptoms',
+    emotionalState: {
+      mood: 3,
+      stress: 8,
+      energy: 4
+    },
+    trigger: 'Work deadline approaching',
+    thoughtPattern: 'Catastrophizing about failing',
+    intervention: {
+      type: 'Breathing & Grounding',
+      steps: [
+        '4-7-8 breathing exercise',
+        '5 senses grounding technique'
+      ],
+      duration: 8
+    },
+    outcome: {
+      improvement: 6,
+      notes: 'Significant reduction in physical anxiety symptoms',
+      insights: [
+        'Tendency to catastrophize under pressure',
+        'Breathing exercises are particularly effective'
+      ]
+    },
+    nextStep: 'Schedule follow-up session tomorrow',
+  },
+]
 
 export const mockSessions: Session[] = [
   {

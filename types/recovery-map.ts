@@ -12,25 +12,22 @@ export interface TriggerCluster {
   theme: string
   frequency: string
   relatedMetrics: string[]
-  intensity: number // 1-5
+  intensity: number // 1-10
 }
 
 export interface RecoveryPattern {
-  id: string
-  name: string
-  positive: boolean
+  id: string 
+  title: string
   description: string
+  trending: 'up' | 'down'
   dataPoints: number
   relatedTriggers?: string[]
 }
 
 export interface RecoveryFocus {
-  id: string
   area: string
-  priority: 'low' | 'medium' | 'high'
-  reason: string
-  practice: string
-  progress?: number // 0-100
+  recommendation: string
+  description: string
 }
 
 export const mockRecoveryMetrics: RecoveryMetric[] = [
