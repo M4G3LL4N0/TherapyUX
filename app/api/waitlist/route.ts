@@ -1,43 +1,57 @@
 import { NextResponse } from 'next/server'
 import { z } from 'zod'
+import { createClient } from '@/lib/supabase/server'
 
-// Temporary in-memory storage (replace with database later)
-let waitlistEmails: string[] = []
-
-const emailSchema = z.string().email()
+const emailSchema = z.string().email({
+  message: 'Please enter a valid email address'
+})
 
 export async function POST(request: Request) {
+  const { email } = await request.json()
+
   try {
-    const { email } = await request.json()
-
     // Validate email
-    const validatedEmail = emailSchema.parse(email)
+    const validatedEmail = emailSchema.parse(email.trim().toLowerCase())
 
-    // Check if email already exists
-    if (waitlistEmails.includes(validatedEmail)) {
+    const supabase = createClient()
+
+    // Check if email exists
+    const { data: existing } = await supabase
+      .from('waitlist')
+      .select('email')
+      .eq('email', validatedEmail)
+      .single()
+    
+    if (existing) {
       return NextResponse.json(
-        { error: 'You\'re already on the waitlist!' },
-        { status: 400 }
+        { error: 'This email is already on the waitlist' },
+        { status: 409 }
       )
     }
 
-    // Add to waitlist
-    waitlistEmails.push(validatedEmail)
+    // Insert new email
+    const { error } = await supabase
+      .from('waitlist')
+      .insert({ email: validatedEmail })
+
+    if (error) throw error
 
     return NextResponse.json(
-      { message: 'You\'ve been added to the waitlist!' },
+      { success: true },
       { status: 200 }
     )
+
   } catch (error) {
     if (error instanceof z.ZodError) {
       return NextResponse.json(
-        { error: 'Please enter a valid email address' },
-        { status: 400 }
+        { error: error.errors[0].message },
+        { status: 422 }
       )
     }
 
+    console.error('Waitlist error:', error)
     return NextResponse.json(
-      { error: 'Something went wrong. Please try again.' },
+      { error: 'Could not add to waitlist. Please try again.' },
       { status: 500 }
     )
   }
