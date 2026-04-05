@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { SectionContainer } from '@/components/ui/section-container'
-import { Icons } from '@/components/icons'
+import { Icons } from '@/components/ui/icons'
 import { cn } from '@/lib/utils'
 
 export function WaitlistSection() {
