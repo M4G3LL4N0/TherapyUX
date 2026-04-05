@@ -67,19 +67,33 @@ export function WaitlistSection() {
             type="submit"
             variant="solid"
             disabled={status === 'loading' || status === 'success'}
+            className="transition-all"
           >
             {status === 'loading' ? (
-              <Icons.spinner className="h-4 w-4 animate-spin" />
+              <div className="flex items-center gap-2">
+                <Icons.spinner className="h-4 w-4 animate-spin" />
+                Processing...
+              </div>
+            ) : status === 'success' ? (
+              <div className="flex items-center gap-2">
+                <Icons.check className="h-4 w-4" />
+                Early Access Granted
+              </div>
             ) : (
-              'Join Waitlist'
+              'Join Early Access'
             )}
           </Button>
         </form>
 
         {status === 'success' && (
-          <p className="mt-4 text-emerald-400 text-sm">
-            Thanks! You've been added to the waitlist.
-          </p>
+          <div className="mt-4 space-y-2">
+            <p className="text-emerald-400 font-medium">
+              You're in. Early access is rolling out.
+            </p>
+            <p className="text-xs text-white/50">
+              We'll contact you as we onboard new cohorts. Thank you for believing in TherapyUX.
+            </p>
+          </div>
         )}
 
         {status === 'error' && (
