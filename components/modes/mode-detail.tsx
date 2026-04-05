@@ -9,7 +9,7 @@ export function ModeDetail({ mode }: { mode: RecoveryMode }) {
     <div className="space-y-6">
       <div className="flex items-center gap-4">
         <div className={`bg-${mode.color}-900/20 p-3 rounded-lg`}>
-          <Icons[mode.icon] className={`h-8 w-8 text-${mode.color}-400`} />
+          <Icons.session className={`h-8 w-8 text-${mode.color}-400`} />
         </div>
         <div>
           <h1 className="text-2xl font-semibold">{mode.name}</h1>

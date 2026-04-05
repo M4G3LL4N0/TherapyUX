@@ -1,22 +1,35 @@
-import { supabase } from './client'
+import { createClient } from "./client"
 
 export async function signUpWithEmail(email: string, password: string) {
-  // Will implement actual auth flow later
-  return { user: null, error: 'Not implemented' }
+  const supabase = createClient()
+
+  const { data, error } = await supabase.auth.signUp({
+    email,
+    password,
+  })
+
+  if (error) throw error
+
+  return data
 }
 
 export async function signInWithEmail(email: string, password: string) {
-  // Will implement actual auth flow later
-  return { user: null, error: 'Not implemented' }
+  const supabase = createClient()
+
+  const { data, error } = await supabase.auth.signInWithPassword({
+    email,
+    password,
+  })
+
+  if (error) throw error
+
+  return data
 }
 
 export async function signOut() {
-  const { error } = await supabase.auth.signOut()
-  return { error }
-}
+  const supabase = createClient()
 
-/* Future auth methods to add:
-- Password reset flows
-- Magic links
-- OAuth providers 
-*/
+  const { error } = await supabase.auth.signOut()
+
+  if (error) throw error
+}

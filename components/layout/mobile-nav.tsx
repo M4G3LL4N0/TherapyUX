@@ -1,16 +1,17 @@
 import { NavItem } from "@/components/ui/nav-item"
-import { Icons } from "@/components/ui/icons"
-import { cn } from "@/lib/utils"
 
-export function MobileNav({ className }: { className?: string }) {
+export function MobileNav({ className = "" }: { className?: string }) {
   return (
-    <nav className={cn("border-b border-white/10 p-4 lg:hidden", className)}>
-      <div className="flex items-center justify-between">
-        <NavItem icon={<Icons.home />} label="Dashboard" href="/app" />
-        <NavItem icon={<Icons.session />} label="Sessions" href="/app/sessions" />
-        <NavItem icon={<Icons.progress />} label="Progress" href="/app/progress" />
-        <NavItem icon={<Icons.settings />} label="Settings" href="/app/settings" />
+    <div
+      className={`border-b border-white/10 bg-black/70 px-4 py-3 backdrop-blur-xl ${className}`}
+    >
+      <div className="flex flex-wrap gap-3">
+        <NavItem href="/app/dashboard" label="Dashboard" />
+        <NavItem href="/app/modes" label="Modes" />
+        <NavItem href="/app/recovery-map" label="Recovery Map" />
+        <NavItem href="/app/sessions" label="Sessions" />
+        <NavItem href="/app/settings" label="Settings" />
       </div>
-    </nav>
+    </div>
   )
 }

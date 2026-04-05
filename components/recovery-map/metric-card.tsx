@@ -1,47 +1,61 @@
-import { RecoveryMetric } from "@/types/recovery-map"
 import { Card } from "@/components/ui/card"
-import { cn } from "@/lib/utils"
 import { Icons } from "@/components/ui/icons"
+import type { RecoveryMetric } from "@/types/recovery-map"
 
-export function RecoveryMetricCard({ metric }: { metric: RecoveryMetric }) {
-  const trendIcon = metric.trend === 'up' ? 
-    <Icons.trendUp className="h-4 w-4 text-emerald-400" /> :
-    metric.trend === 'down' ? 
-    <Icons.trendDown className="h-4 w-4 text-rose-400" /> :
-    <Icons.trendNeutral className="h-4 w-4 text-amber-400" />
+export function RecoveryMetricCard({
+  metric,
+}: {
+  metric: RecoveryMetric
+}) {
+  const isUp = metric.trend === "up"
+  const isDown = metric.trend === "down"
 
   return (
-    <Card className="p-6 hover:bg-white/5 transition-colors">
-      <div className="flex justify-between items-start">
+    <Card className="rounded-3xl border-white/10 bg-white/5 p-6">
+      <div className="flex items-start justify-between gap-4">
         <div>
-          <h3 className="font-medium">{metric.label}</h3>
-          <p className="text-sm text-white/60">{metric.description}</p>
+          <p className="text-xs uppercase tracking-[0.18em] text-white/40">
+            {metric.label}
+          </p>
+          <h3 className="mt-3 text-3xl font-semibold tracking-tight text-white">
+            {metric.score}
+          </h3>
         </div>
-        <div className="flex items-center gap-2">
-          <span className="text-xl font-semibold tracking-tighter">
-            {metric.score}/100
-          </span>
-          {trendIcon}
+
+        <div
+          className={`rounded-xl p-2 ${
+            isUp
+              ? "bg-emerald-900/20"
+              : isDown
+              ? "bg-rose-900/20"
+              : "bg-amber-900/20"
+          }`}
+        >
+          {isUp ? (
+            <Icons.trendUp className="h-4 w-4 text-emerald-400" />
+          ) : isDown ? (
+            <Icons.trendDown className="h-4 w-4 text-rose-400" />
+          ) : (
+            <Icons.trendNeutral className="h-4 w-4 text-amber-400" />
+          )}
         </div>
       </div>
 
-      <div className="mt-4 space-y-2">
-        <div className="overflow-hidden rounded-full bg-white/10 h-2">
-          <div 
-            className="h-full rounded-full bg-gradient-to-r from-emerald-400 to-emerald-600"
-            style={{ width: `${metric.score}%` }}
-          />
-        </div>
-      
-        {metric.badges && (
-          <div className="flex gap-2">
-            {metric.badges.map((badge, i) => (
-              <span key={i} className="text-xs px-2 py-1 rounded-full bg-emerald-900/20 text-emerald-400">
-                {badge}
-              </span>
-            ))}
-          </div>
-        )}
+      <p className="mt-4 text-sm leading-6 text-white/65">
+        {metric.description}
+      </p>
+
+      <div className="mt-5 h-2 w-full overflow-hidden rounded-full bg-white/10">
+        <div
+          className={`h-full rounded-full ${
+            isUp
+              ? "bg-emerald-400"
+              : isDown
+              ? "bg-rose-400"
+              : "bg-amber-400"
+          }`}
+          style={{ width: `${Math.max(0, Math.min(metric.score, 100))}%` }}
+        />
       </div>
     </Card>
   )

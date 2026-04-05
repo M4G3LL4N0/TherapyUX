@@ -1,442 +1,249 @@
-import { SVGProps } from "react"
+import type { SVGProps } from "react"
 
-export function Icons() {
-  return {
-    menu: (props: SVGProps<SVGSVGElement>) => (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <line x1="4" y1="12" x2="20" y2="12" />
-        <line x1="4" y1="6" x2="20" y2="6" />
-        <line x1="4" y1="18" x2="20" y2="18" />
-      </svg>
-    ),
-    home: (props: SVGProps<SVGSVGElement>) => (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-        <polyline points="9 22 9 12 15 12 15 22" />
-      </svg>
-    ),
-    session: (props: SVGProps<SVGSVGElement>) => (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-      </svg>
-    ),
-    progress: (props: SVGProps<SVGSVGElement>) => (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-      </svg>
-    ),
-    settings: (props: SVGProps<SVGSVGElement>) => (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <circle cx="12" cy="12" r="3" />
-        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
-      </svg>
-    ),
-    plus: (props: SVGProps<SVGSVGElement>) => (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <line x1="12" y1="5" x2="12" y2="19" />
-        <line x1="5" y1="12" x2="19" y2="12" />
-      </svg>
-    ),
-    journal: (props: SVGProps<SVGSVGElement>) => (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-      </svg>
-    ),
-    meditation: (props: SVGProps<SVGSVGElement>) => (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <circle cx="12" cy="12" r="10" />
-        <line x1="2" y1="12" x2="22" y2="12" />
-        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-      </svg>
-    ),
-    breath: (props: SVGProps<SVGSVGElement>) => (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M6 12h12" />
-        <path d="M6 12a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2" />
-        <path d="M6 12a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2" />
-      </svg>
-    ),
-    lock: (props: SVGProps<SVGSVGElement>) => (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-      </svg>
-    ),
-    flame: (props: SVGProps<SVGSVGElement>) => (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 3 3 2.7 5.3 2 7-1.3 1.3-3 2-5 2-3.5 0-5.5-3.5-5.5-3.5z" />
-      </svg>
-    ),
-    heart: (props: SVGProps<SVGSVGElement>) => (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z" />
-      </svg>
-    ),
-    brain: (props: SVGProps<SVGSVGElement>) => (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M9.5 2a2.5 2.5 0 0 1 5 0v7a2.5 2.5 0 0 1-5 0V2z" />
-        <path d="M4.5 10a2.5 2.5 0 0 1 5 0v7a2.5 2.5 0 0 1-5 0v-7z" />
-        <path d="M19.5 10a2.5 2.5 0 0 1 5 0v7a2.5 2.5 0 0 1-5 0v-7z" />
-        <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-      </svg>
-    ),
-    panic: (props: SVGProps<SVGSVGElement>) => (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
-        <line x1="12" y1="9" x2="12" y2="13" />
-        <line x1="12" y1="17" x2="12.01" y2="17" />
-      </svg>
-    ),
-    shame: (props: SVGProps<SVGSVGElement>) => (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <circle cx="12" cy="12" r="10" />
-        <path d="M16 16s-1.5-2-4-2-4 2-4 2" />
-        <line x1="9" y1="9" x2="9.01" y2="9" />
-        <line x1="15" y1="9" x2="15.01" y2="9" />
-      </svg>
-    ),
-    check: (props: SVGProps<SVGSVGElement>) => (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <polyline points="20 6 9 17 4 12" />
-      </svg>
-    ),
-    arrowRight: (props: SVGProps<SVGSVGElement>) => (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <line x1="5" y1="12" x2="19" y2="12" />
-        <polyline points="12 5 19 12 12 19" />
-      </svg>
-    ),
-    emergency: (props: SVGProps<SVGSVGElement>) => (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M12 2v4" />
-        <path d="m16 6 3 3" />
-        <path d="M18 12h4" />
-        <path d="m16 18 3-3" />
-        <path d="M12 22v-4" />
-        <path d="m8 18-3 3" />
-        <path d="M6 12H2" />
-        <path d="m8 6-3-3" />
-      </svg>
-    ),
-    checkIn: (props: SVGProps<SVGSVGElement>) => (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-      </svg>
-    ),
-    insight: (props: SVGProps<SVGSVGElement>) => (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <circle cx="12" cy="12" r="10" />
-        <path d="M8 14s1.5 2 4 2 4-2 4-2" />
-        <line x1="9" y1="9" x2="9.01" y2="9" />
-        <line x1="15" y1="9" x2="15.01" y2="9" />
-      </svg>
-    ),
-    trendUp: (props: SVGProps<SVGSVGElement>) => (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
-        <polyline points="16 7 22 7 22 13" />
-      </svg>
-    ),
-    trendDown: (props: SVGProps<SVGSVGElement>) => (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <polyline points="22 17 13.5 8.5 8.5 13.5 2 7" />
-        <polyline points="16 17 22 17 22 11" />
-      </svg>
-    ),
-    trendNeutral: (props: SVGProps<SVGSVGElement>) => (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <line x1="3" y1="12" x2="21" y2="12" />
-      </svg>
-    ),
-    shield: (props: SVGProps<SVGSVGElement>) => (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-      </svg>
-    ),
-    trash: (props: SVGProps<SVGSVGElement>) => (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M3 6h18" />
-        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
-      </svg>
-    ),
-  }
+type IconProps = SVGProps<SVGSVGElement>
+
+function BaseIcon(props: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    />
+  )
 }
+
+export const Icons = {
+  menu: (props: IconProps) => (
+    <BaseIcon {...props}>
+      <path d="M4 7h16" />
+      <path d="M4 12h16" />
+      <path d="M4 17h16" />
+    </BaseIcon>
+  ),
+
+  home: (props: IconProps) => (
+    <BaseIcon {...props}>
+      <path d="M3 11.5 12 4l9 7.5" />
+      <path d="M5 10.5V20h14v-9.5" />
+    </BaseIcon>
+  ),
+
+  sparkles: (props: IconProps) => (
+    <BaseIcon {...props}>
+      <path d="m12 3 1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8L12 3Z" />
+      <path d="M19 14l.9 2.1L22 17l-2.1.9L19 20l-.9-2.1L16 17l2.1-.9L19 14Z" />
+      <path d="M5 14l.9 2.1L8 17l-2.1.9L5 20l-.9-2.1L2 17l2.1-.9L5 14Z" />
+    </BaseIcon>
+  ),
+
+  spinner: (props: IconProps) => (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden="true"
+      {...props}
+    >
+      <circle
+        cx="12"
+        cy="12"
+        r="9"
+        stroke="currentColor"
+        strokeOpacity="0.2"
+        strokeWidth="3"
+      />
+      <path
+        d="M21 12a9 9 0 0 0-9-9"
+        stroke="currentColor"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+    </svg>
+  ),
+
+  plus: (props: IconProps) => (
+    <BaseIcon {...props}>
+      <path d="M12 5v14" />
+      <path d="M5 12h14" />
+    </BaseIcon>
+  ),
+
+  session: (props: IconProps) => (
+    <BaseIcon {...props}>
+      <path d="M12 21c4.97 0 9-3.36 9-7.5S16.97 6 12 6 3 9.36 3 13.5 7.03 21 12 21Z" />
+      <path d="M8.5 12.5c.8-1.2 2-1.8 3.5-1.8s2.7.6 3.5 1.8" />
+      <path d="M9 15.5c.9.7 1.9 1 3 1s2.1-.3 3-1" />
+      <path d="M9 9V4h6v5" />
+    </BaseIcon>
+  ),
+
+  journal: (props: IconProps) => (
+    <BaseIcon {...props}>
+      <path d="M7 4.5h8.5A2.5 2.5 0 0 1 18 7v12.5H9.5A2.5 2.5 0 0 0 7 22V4.5Z" />
+      <path d="M7 4.5H6A2 2 0 0 0 4 6.5v11A2.5 2.5 0 0 0 6.5 20H18" />
+      <path d="M9.5 8H15" />
+      <path d="M9.5 11H15" />
+      <path d="M9.5 14H13.5" />
+    </BaseIcon>
+  ),
+
+  emergency: (props: IconProps) => (
+    <BaseIcon {...props}>
+      <path d="M12 3 21 19H3L12 3Z" />
+      <path d="M12 9v5" />
+      <path d="M12 17h.01" />
+    </BaseIcon>
+  ),
+
+  mic: (props: IconProps) => (
+    <BaseIcon {...props}>
+      <rect x="9" y="3" width="6" height="11" rx="3" />
+      <path d="M5 11a7 7 0 0 0 14 0" />
+      <path d="M12 18v3" />
+      <path d="M9 21h6" />
+    </BaseIcon>
+  ),
+
+  chevronRight: (props: IconProps) => (
+    <BaseIcon {...props}>
+      <path d="m9 6 6 6-6 6" />
+    </BaseIcon>
+  ),
+
+  chevronLeft: (props: IconProps) => (
+    <BaseIcon {...props}>
+      <path d="m15 6-6 6 6 6" />
+    </BaseIcon>
+  ),
+
+  arrowRight: (props: IconProps) => (
+    <BaseIcon {...props}>
+      <path d="M5 12h14" />
+      <path d="m13 6 6 6-6 6" />
+    </BaseIcon>
+  ),
+
+  check: (props: IconProps) => (
+    <BaseIcon {...props}>
+      <path d="m5 12 4.2 4.2L19 6.5" />
+    </BaseIcon>
+  ),
+
+  settings: (props: IconProps) => (
+    <BaseIcon {...props}>
+      <path d="M12 3v3" />
+      <path d="M12 18v3" />
+      <path d="M3 12h3" />
+      <path d="M18 12h3" />
+      <path d="m5.6 5.6 2.1 2.1" />
+      <path d="m16.3 16.3 2.1 2.1" />
+      <path d="m18.4 5.6-2.1 2.1" />
+      <path d="m7.7 16.3-2.1 2.1" />
+      <circle cx="12" cy="12" r="3.5" />
+    </BaseIcon>
+  ),
+
+  shield: (props: IconProps) => (
+    <BaseIcon {...props}>
+      <path d="M12 3 5 6v5c0 5 3.4 8.5 7 10 3.6-1.5 7-5 7-10V6l-7-3Z" />
+    </BaseIcon>
+  ),
+
+  lock: (props: IconProps) => (
+    <BaseIcon {...props}>
+      <rect x="5" y="11" width="14" height="10" rx="2" />
+      <path d="M8 11V8a4 4 0 1 1 8 0v3" />
+    </BaseIcon>
+  ),
+
+  chart: (props: IconProps) => (
+    <BaseIcon {...props}>
+      <path d="M4 19h16" />
+      <path d="M7 16V9" />
+      <path d="M12 16V5" />
+      <path d="M17 16v-7" />
+    </BaseIcon>
+  ),
+
+  trendUp: (props: IconProps) => (
+    <BaseIcon {...props}>
+      <path d="M4 16 10 10l4 4 6-6" />
+      <path d="M14 8h6v6" />
+    </BaseIcon>
+  ),
+
+  trendDown: (props: IconProps) => (
+    <BaseIcon {...props}>
+      <path d="M4 8 10 14l4-4 6 6" />
+      <path d="M14 16h6v-6" />
+    </BaseIcon>
+  ),
+
+  trendNeutral: (props: IconProps) => (
+    <BaseIcon {...props}>
+      <path d="M4 12h16" />
+    </BaseIcon>
+  ),
+
+  user: (props: IconProps) => (
+    <BaseIcon {...props}>
+      <circle cx="12" cy="8" r="4" />
+      <path d="M4 20c1.8-3.5 5-5 8-5s6.2 1.5 8 5" />
+    </BaseIcon>
+  ),
+
+  heart: (props: IconProps) => (
+    <BaseIcon {...props}>
+      <path d="m12 20-1.4-1.3C5.4 14 2 10.9 2 7.1 2 4.5 4 2.5 6.6 2.5c1.5 0 2.9.7 3.8 1.9.9-1.2 2.3-1.9 3.8-1.9C20 2.5 22 4.5 22 7.1c0 3.8-3.4 6.9-8.6 11.6L12 20Z" />
+    </BaseIcon>
+  ),
+
+  brain: (props: IconProps) => (
+    <BaseIcon {...props}>
+      <path d="M9 4a3 3 0 0 0-3 3v1a2.5 2.5 0 0 0-2 2.5A2.5 2.5 0 0 0 6 13v1a3 3 0 0 0 3 3" />
+      <path d="M15 4a3 3 0 0 1 3 3v1a2.5 2.5 0 0 1 2 2.5A2.5 2.5 0 0 1 18 13v1a3 3 0 0 1-3 3" />
+      <path d="M9 4c0 1.5 1 2.5 3 3 2-.5 3-1.5 3-3" />
+      <path d="M9 17c0-1.5 1-2.5 3-3 2 .5 3 1.5 3 3" />
+      <path d="M12 7v10" />
+    </BaseIcon>
+  ),
+
+  flame: (props: IconProps) => (
+    <BaseIcon {...props}>
+      <path d="M12 3s3 3 3 6a3 3 0 1 1-6 0c0-2 1-3.5 3-6Z" />
+      <path d="M8 14a4 4 0 1 0 8 0c0-2.5-1.5-4-4-6-2.5 2-4 3.5-4 6Z" />
+    </BaseIcon>
+  ),
+
+  meditation: (props: IconProps) => (
+    <BaseIcon {...props}>
+      <circle cx="12" cy="5" r="2.5" />
+      <path d="M8 10c1.2 1 2.5 1.5 4 1.5s2.8-.5 4-1.5" />
+      <path d="M7 14l2.5-2" />
+      <path d="M17 14l-2.5-2" />
+      <path d="M8 19l2-4h4l2 4" />
+      <path d="M6 19h12" />
+    </BaseIcon>
+  ),
+
+  breath: (props: IconProps) => (
+    <BaseIcon {...props}>
+      <path d="M4 12c2-3 4-4 6-4 2.5 0 3.5 2 5.5 2 1.5 0 2.8-.8 4.5-2" />
+      <path d="M4 16c2-3 4-4 6-4 2.5 0 3.5 2 5.5 2 1.5 0 2.8-.8 4.5-2" />
+    </BaseIcon>
+  ),
+
+  trash: (props: IconProps) => (
+    <BaseIcon {...props}>
+      <path d="M4 7h16" />
+      <path d="M10 11v6" />
+      <path d="M14 11v6" />
+      <path d="M6 7l1 13h10l1-13" />
+      <path d="M9 7V4h6v3" />
+    </BaseIcon>
+  ),
+} as const

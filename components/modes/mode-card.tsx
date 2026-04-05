@@ -11,7 +11,7 @@ export function ModeCard({ mode }: { mode: RecoveryMode }) {
         <div className="p-6">
           <div className="flex items-center gap-4">
             <div className={`bg-${mode.color}-900/20 p-3 rounded-lg`}>
-              <Icons[mode.icon] className={`h-6 w-6 text-${mode.color}-400`} />
+              <Icons.session className={`h-6 w-6 text-${mode.color}-400`} />
             </div>
             <div>
               <h2 className="text-lg font-semibold">{mode.name}</h2>

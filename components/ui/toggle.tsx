@@ -1,4 +1,5 @@
-import { cn } from "@/lib/utils"
+"use client"
+
 import { useState } from "react"
 
 export function Toggle({
@@ -12,19 +13,20 @@ export function Toggle({
 
   return (
     <button
+      type="button"
       disabled={disabled}
-      onClick={() => setChecked(!checked)}
-      className={cn(
-        "relative inline-flex h-6 w-11 items-center rounded-full transition-colors",
-        checked ? 'bg-emerald-500' : 'bg-white/10',
-        disabled && 'opacity-50 cursor-not-allowed'
-      )}
+      aria-pressed={checked}
+      onClick={() => {
+        if (!disabled) setChecked(!checked)
+      }}
+      className={`relative h-6 w-11 rounded-full transition ${
+        checked ? "bg-emerald-500" : "bg-white/20"
+      } ${disabled ? "cursor-not-allowed opacity-50" : ""}`}
     >
       <span
-        className={cn(
-          "inline-block h-4 w-4 transform rounded-full bg-white transition-transform",
-          checked ? 'translate-x-6' : 'translate-x-1'
-        )}
+        className={`absolute top-0.5 h-5 w-5 rounded-full bg-white transition ${
+          checked ? "left-5" : "left-0.5"
+        }`}
       />
     </button>
   )
