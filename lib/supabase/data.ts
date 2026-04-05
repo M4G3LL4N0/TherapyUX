@@ -1,27 +1,31 @@
-import { supabase } from './client'
-import type { Database } from '@/types/supabase'
+import { createClient } from "@/lib/supabase/client"
 
-export async function addToWaitlist(email: string) {
-  const { data, error } = await supabase
-    .from('waitlist')
-    .insert({ email })
-    .select()
-  
-  if (error) throw error
-  return data[0]
+type WaitlistRow = {
+  email: string
 }
 
-export async function getWaitlist() {
-  const { data, error } = await supabase
-    .from('waitlist')
-    .select('*')
-  
+export async function addToWaitlist(email: string) {
+  const supabase = createClient()
+
+  const { data, error } = await (supabase as any)
+    .from("waitlist")
+    .insert([{ email } satisfies WaitlistRow])
+    .select()
+
   if (error) throw error
+
   return data
 }
 
-/* Future data methods to scaffold:
-- Session CRUD operations
-- User settings CRUD
-- Recovery logs
-*/
+export async function getWaitlistEntries() {
+  const supabase = createClient()
+
+  const { data, error } = await (supabase as any)
+    .from("waitlist")
+    .select("*")
+    .order("created_at", { ascending: false })
+
+  if (error) throw error
+
+  return data ?? []
+}

@@ -1,13 +1,28 @@
-import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
-import { cookies } from 'next/headers'
-import type { Database } from '@/types/supabase'
+import { createServerClient } from "@supabase/auth-helpers-nextjs"
+import { cookies } from "next/headers"
+import type { Database } from "@/types/supabase"
 
-export const createSupabaseServerClient = () => {
-  const cookieStore = cookies()
-  return createServerComponentClient<Database>({ cookies: () => cookieStore })
+export async function createClient() {
+  const cookieStore = await cookies()
+
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL!
+  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+
+  if (!url || !key) {
+    throw new Error("Missing Supabase environment variables")
+  }
+
+  return createServerClient<Database>(url, key, {
+    cookies: {
+      get(name: string) {
+        return cookieStore.get(name)?.value
+      },
+      set(name: string, value: string, options: any) {
+        cookieStore.set({ name, value, ...options })
+      },
+      remove(name: string, options: any) {
+        cookieStore.set({ name, value: "", ...options })
+      },
+    },
+  })
 }
-
-/* Usage examples:
-- Auth: const { data: { user } } = await supabase.auth.getUser()
-- Data: const { data: waitlist } = await supabase.from('waitlist').select('*')
-*/
