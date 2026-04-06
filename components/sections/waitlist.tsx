@@ -49,41 +49,50 @@ export function WaitlistSection() {
           Be the first to try TherapyUX when we launch.
         </p>
 
-        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2">
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Your email"
-            className={cn(
-              "flex-1 bg-white/5 border border-white/10 rounded-md px-4 py-2 text-sm",
-              "focus:outline-none focus:ring-2 focus:ring-emerald-500/30",
-              "placeholder:text-white/40"
+        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
+          <div className="relative flex-1">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your email"
+              className={cn(
+                "flex-1 w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm",
+                "focus:outline-none focus:ring-2 focus:ring-emerald-500/30",
+                "placeholder:text-white/30",
+                status === 'error' && "border-rose-400/30",
+                status === 'success' && "border-emerald-400/30"
+              )}
+              required
+              disabled={status !== 'idle'}
+            />
+            {status === 'error' && (
+              <Icons.emergency className="absolute right-3 top-3 h-4 w-4 text-rose-400" />
             )}
-            required
-            disabled={status !== 'idle'}
-          />
+            {status === 'success' && (
+              <Icons.check className="absolute right-3 top-3 h-4 w-4 text-emerald-400" />
+            )}
+          </div>
           <Button
             type="submit"
             variant="solid"
+            size="lg"
             disabled={status === 'loading' || status === 'success'}
-            className="transition-all"
           >
             {status === 'loading' ? (
-              <div className="flex items-center gap-2">
-                <Icons.spinner className="h-4 w-4 animate-spin" />
-                Processing...
-              </div>
-            ) : status === 'success' ? (
-              <div className="flex items-center gap-2">
-                <Icons.check className="h-4 w-4" />
-                Early Access Granted
-              </div>
-            ) : (
-              'Join Early Access'
-            )}
+              <>
+                <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
+                Securing spot...
+              </>
+            ) : status === 'success' ? 'Access Granted' : 'Join Waitlist'}
           </Button>
         </form>
+
+        {status === 'error' && (
+          <p className="mt-2 text-sm text-rose-400">
+            Failed to join waitlist. Please try again.
+          </p>
+        )}
 
         {status === 'success' && (
           <div className="mt-4 space-y-2">

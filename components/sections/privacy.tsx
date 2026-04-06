@@ -8,14 +8,27 @@ export function PrivacySection() {
     <SectionContainer id="privacy">
       <div className="grid gap-16 md:grid-cols-2 md:items-center">
         <div>
-          <Badge>Security</Badge>
+          <Badge>Privacy Architecture</Badge>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white">
-            Therapy shouldn&apos;t require trust in surveillance.
+            Therapy only works when it's truly private.
           </h2>
           <p className="mt-4 text-white/65">
-            TherapyUX is built around privacy-first architecture, controlled data
-            exposure, and calm, secure support.
+            Unlike other platforms, TherapyUX is built on three uncompromising principles:
           </p>
+          <ul className="mt-6 space-y-4 text-sm text-white/65">
+            <li className="flex items-start gap-3">
+              <Icons.lock className="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-400" />
+              <span>End-to-end encrypted sessions</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <Icons.shield className="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-400" />
+              <span>Zero third-party data sharing</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <Icons.meditation className="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-400" />
+              <span>On-device processing where possible</span>
+            </li>
+          </ul>
         </div>
 
         <div className="grid gap-4">
