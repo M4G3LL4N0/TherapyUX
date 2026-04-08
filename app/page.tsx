@@ -15,7 +15,9 @@ export default function Home() {
       <main>
         <HeroSection />
         <FeaturesSection />
-        <ProductSection />
+        <div className="glow-effect">
+          <ProductSection />
+        </div>
         <PrivacySection />
         <HowItWorksSection />
         <WaitlistSection />
