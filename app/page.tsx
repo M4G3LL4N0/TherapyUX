@@ -7,6 +7,8 @@ import { PrivacySection } from "@/components/sections/privacy"
 import { HowItWorksSection } from "@/components/sections/how-it-works"
 import { WaitlistSection } from "@/components/sections/waitlist"
 import { Icons } from "@/components/ui/icons"
+import { Card } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 
 export default function Home() {
   return (
@@ -32,7 +34,9 @@ export default function Home() {
                   <h3 className="text-lg font-medium">
                     Daily Insights
                   </h3>
-                  <Badge variant="success">+8%</Badge>
+                  <Badge variant="success" className="bg-emerald-400/10 text-emerald-400 border-emerald-400/20">
+                    +8%
+                  </Badge>
                 </div>
                 <p className="mt-2 text-white/70">Track your emotional patterns and recovery progress with detailed analytics</p>
                 <div className="grid grid-cols-2 gap-4 mt-4">

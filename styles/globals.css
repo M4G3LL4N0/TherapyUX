@@ -1,0 +1,14 @@
+.dashboard-grid-responsive {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.metric-item {
+  @apply p-3 bg-white/5 rounded-lg;
+}
+.metric-value {
+  @apply text-xl font-medium;
+}
+.metric-label {
+  @apply text-xs text-white/60 mt-1;
+}
