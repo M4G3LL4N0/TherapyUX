@@ -27,12 +27,27 @@ export default function Home() {
             <ProductSection />
             <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="recovery-card">
-                <h3 className="recovery-card-header">Daily Insights</h3>
+                <h3 className="recovery-card-header">
+                  Daily Insights
+                  <span className="recovery-trend up">+8%</span>
+                </h3>
                 <p className="recovery-card-content">Track your emotional patterns and recovery progress with detailed analytics</p>
-                <div className="mt-4 h-32 bg-white/5 rounded-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <span className="text-emerald-400 text-2xl font-medium">72%</span>
-                    <p className="text-xs text-white/60 mt-1">Emotional Balance</p>
+                <div className="metric-grid">
+                  <div className="metric-item">
+                    <div className="metric-value">72%</div>
+                    <div className="metric-label">Emotional Balance</div>
+                  </div>
+                  <div className="metric-item">
+                    <div className="metric-value">4.8</div>
+                    <div className="metric-label">Mood Score</div>
+                  </div>
+                  <div className="metric-item">
+                    <div className="metric-value">3.2</div>
+                    <div className="metric-label">Stress Level</div>
+                  </div>
+                  <div className="metric-item">
+                    <div className="metric-value">82%</div>
+                    <div className="metric-label">Clarity</div>
                   </div>
                 </div>
               </div>
@@ -47,12 +62,27 @@ export default function Home() {
                 </div>
               </div>
               <div className="recovery-card">
-                <h3 className="recovery-card-header">Guided Sessions</h3>
+                <h3 className="recovery-card-header">
+                  Guided Sessions
+                  <span className="recovery-trend neutral">0</span>
+                </h3>
                 <p className="recovery-card-content">Personalized exercises for mental well-being tailored to your recovery journey</p>
-                <div className="mt-4 h-32 bg-white/5 rounded-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <span className="text-emerald-400 text-2xl font-medium">12</span>
-                    <p className="text-xs text-white/60 mt-1">Completed</p>
+                <div className="metric-grid">
+                  <div className="metric-item">
+                    <div className="metric-value">12</div>
+                    <div className="metric-label">Completed</div>
+                  </div>
+                  <div className="metric-item">
+                    <div className="metric-value">3</div>
+                    <div className="metric-label">In Progress</div>
+                  </div>
+                  <div className="metric-item">
+                    <div className="metric-value">85%</div>
+                    <div className="metric-label">Engagement</div>
+                  </div>
+                  <div className="metric-item">
+                    <div className="metric-value">4.7</div>
+                    <div className="metric-label">Avg. Rating</div>
                   </div>
                 </div>
               </div>

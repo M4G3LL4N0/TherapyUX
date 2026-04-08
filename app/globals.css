@@ -127,6 +127,54 @@ body {
   font-weight: 600;
   margin-bottom: var(--space-sm);
   color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.recovery-trend {
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  background: var(--glass);
+}
+
+.recovery-trend.up {
+  color: var(--primary);
+}
+
+.recovery-trend.down {
+  color: #ff4d4d;
+}
+
+.recovery-trend.neutral {
+  color: var(--muted);
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.metric-item {
+  background: var(--glass);
+  padding: var(--space-sm);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.metric-label {
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin-top: 0.25rem;
 }
 
 .recovery-card-content {
