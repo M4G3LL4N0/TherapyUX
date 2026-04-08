@@ -67,8 +67,8 @@ export default function Home() {
                     <p className="text-xs text-white/60 mt-1">New Entries</p>
                   </div>
                 </div>
-              </div>
-              <div className="recovery-card">
+              </Card>
+              <Card className="p-6 hover:border-emerald-400/30 transition-colors duration-300">
                 <h3 className="recovery-card-header">
                   Guided Sessions
                   <span className="recovery-trend neutral">0</span>
@@ -93,7 +93,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="recovery-card col-span-full">
+              <Card className="col-span-full hover:border-emerald-400/30 transition-colors duration-300">
                 <h3 className="recovery-card-header">Weekly Insights</h3>
                 <p className="recovery-card-content">
                   View your progress trends over time with detailed weekly reports and actionable insights
@@ -150,8 +150,8 @@ export default function Home() {
         <div className="py-24 bg-gradient-to-b from-black to-emerald-950/10">
           <div className="container mx-auto px-4">
             <HowItWorksSection />
-            <div className="mt-16 dashboard-grid-auto">
-              <div className="recovery-card">
+            <div className="mt-16 dashboard-grid-auto gap-4">
+              <Card className="hover:border-emerald-400/30 transition-colors duration-300">
                 <h3 className="recovery-card-header">Data Security</h3>
                 <p className="recovery-card-content">End-to-end encryption ensures your privacy</p>
                 <div className="mt-4">
