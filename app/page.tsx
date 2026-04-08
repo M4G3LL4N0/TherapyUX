@@ -27,16 +27,25 @@ export default function Home() {
             <ProductSection />
             <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="recovery-card">
-                <h3 className="text-xl font-semibold mb-4">Daily Insights</h3>
-                <p className="text-white/80">Track your emotional patterns and recovery progress</p>
+                <h3 className="recovery-card-header">Daily Insights</h3>
+                <p className="recovery-card-content">Track your emotional patterns and recovery progress with detailed analytics</p>
               </div>
               <div className="recovery-card">
-                <h3 className="text-xl font-semibold mb-4">Secure Journaling</h3>
-                <p className="text-white/80">Private, encrypted space for your thoughts and reflections</p>
+                <h3 className="recovery-card-header">Secure Journaling</h3>
+                <p className="recovery-card-content">Private, encrypted space for your thoughts and reflections with end-to-end encryption</p>
               </div>
               <div className="recovery-card">
-                <h3 className="text-xl font-semibold mb-4">Guided Sessions</h3>
-                <p className="text-white/80">Personalized exercises for mental well-being</p>
+                <h3 className="recovery-card-header">Guided Sessions</h3>
+                <p className="recovery-card-content">Personalized exercises for mental well-being tailored to your recovery journey</p>
+              </div>
+              <div className="recovery-card dashboard-grid-wide">
+                <h3 className="recovery-card-header">Weekly Insights</h3>
+                <p className="recovery-card-content">
+                  View your progress trends over time with detailed weekly reports and actionable insights
+                </p>
+                <div className="mt-4 h-48 bg-white/5 rounded-lg">
+                  {/* Placeholder for chart */}
+                </div>
               </div>
             </div>
           </div>

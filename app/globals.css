@@ -68,6 +68,12 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--space-md);
   padding: var(--space-md);
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.dashboard-grid-wide {
+  grid-column: 1 / -1;
 }
 
 .recovery-card {
@@ -76,11 +82,42 @@ body {
   border-radius: 12px;
   padding: var(--space-md);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .recovery-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 20px rgba(0, 255, 159, 0.1);
+}
+
+.recovery-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--primary);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.recovery-card:hover::before {
+  opacity: 1;
+}
+
+.recovery-card-header {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+  color: var(--primary);
+}
+
+.recovery-card-content {
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.5;
 }
 
 .progress-ring {
