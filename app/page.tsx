@@ -6,6 +6,7 @@ import { ProductSection } from "@/components/sections/product"
 import { PrivacySection } from "@/components/sections/privacy"
 import { HowItWorksSection } from "@/components/sections/how-it-works"
 import { WaitlistSection } from "@/components/sections/waitlist"
+import { Icons } from "@/components/ui/icons"
 
 export default function Home() {
   return (
@@ -26,13 +27,15 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <ProductSection />
             <div className="mt-16 dashboard-grid-responsive">
-              <div className="recovery-card">
-                <h3 className="recovery-card-header">
-                  Daily Insights
-                  <span className="recovery-trend up">+8%</span>
-                </h3>
-                <p className="recovery-card-content">Track your emotional patterns and recovery progress with detailed analytics</p>
-                <div className="metric-grid">
+              <Card className="p-6">
+                <div className="flex justify-between items-center">
+                  <h3 className="text-lg font-medium">
+                    Daily Insights
+                  </h3>
+                  <Badge variant="success">+8%</Badge>
+                </div>
+                <p className="mt-2 text-white/70">Track your emotional patterns and recovery progress with detailed analytics</p>
+                <div className="grid grid-cols-2 gap-4 mt-4">
                   <div className="metric-item">
                     <div className="metric-value">72%</div>
                     <div className="metric-label">Emotional Balance</div>
