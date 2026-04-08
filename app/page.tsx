@@ -12,14 +12,26 @@ export default function Home() {
     <div className="min-h-screen bg-black text-white">
       <Header />
 
-      <main>
-        <HeroSection />
+      <main className="flex-1">
+        <div className="relative overflow-hidden">
+          <HeroSection />
+          <div className="absolute inset-0 -z-10">
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-900/10 via-black to-black" />
+          </div>
+        </div>
+
         <FeaturesSection />
-        <div className="glow-effect">
+        
+        <div className="relative py-24 glow-effect">
           <ProductSection />
         </div>
+
         <PrivacySection />
-        <HowItWorksSection />
+        
+        <div className="py-24 bg-gradient-to-b from-black to-emerald-950/10">
+          <HowItWorksSection />
+        </div>
+
         <WaitlistSection />
       </main>
 
