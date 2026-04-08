@@ -29,22 +29,43 @@ export default function Home() {
               <div className="recovery-card">
                 <h3 className="recovery-card-header">Daily Insights</h3>
                 <p className="recovery-card-content">Track your emotional patterns and recovery progress with detailed analytics</p>
+                <div className="mt-4 h-32 bg-white/5 rounded-lg flex items-center justify-center">
+                  <div className="text-center">
+                    <span className="text-emerald-400 text-2xl font-medium">72%</span>
+                    <p className="text-xs text-white/60 mt-1">Emotional Balance</p>
+                  </div>
+                </div>
               </div>
               <div className="recovery-card">
                 <h3 className="recovery-card-header">Secure Journaling</h3>
                 <p className="recovery-card-content">Private, encrypted space for your thoughts and reflections with end-to-end encryption</p>
+                <div className="mt-4 h-32 bg-white/5 rounded-lg flex items-center justify-center">
+                  <div className="text-center">
+                    <span className="text-emerald-400 text-2xl font-medium">3</span>
+                    <p className="text-xs text-white/60 mt-1">New Entries</p>
+                  </div>
+                </div>
               </div>
               <div className="recovery-card">
                 <h3 className="recovery-card-header">Guided Sessions</h3>
                 <p className="recovery-card-content">Personalized exercises for mental well-being tailored to your recovery journey</p>
+                <div className="mt-4 h-32 bg-white/5 rounded-lg flex items-center justify-center">
+                  <div className="text-center">
+                    <span className="text-emerald-400 text-2xl font-medium">12</span>
+                    <p className="text-xs text-white/60 mt-1">Completed</p>
+                  </div>
+                </div>
               </div>
               <div className="recovery-card dashboard-grid-wide">
                 <h3 className="recovery-card-header">Weekly Insights</h3>
                 <p className="recovery-card-content">
                   View your progress trends over time with detailed weekly reports and actionable insights
                 </p>
-                <div className="mt-4 h-48 bg-white/5 rounded-lg">
-                  {/* Placeholder for chart */}
+                <div className="mt-4 h-48 bg-white/5 rounded-lg flex items-center justify-center">
+                  <div className="text-center">
+                    <span className="text-emerald-400 text-2xl font-medium">+15%</span>
+                    <p className="text-xs text-white/60 mt-1">Recovery Progress</p>
+                  </div>
                 </div>
               </div>
             </div>
