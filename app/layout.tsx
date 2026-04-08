@@ -29,7 +29,9 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-black text-white">
         <div className="flex-1 flex flex-col">
-          {children}
+          <div className="dashboard-grid">
+            {children}
+          </div>
         </div>
       </body>
     </html>
