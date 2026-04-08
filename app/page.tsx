@@ -92,7 +92,7 @@ export default function Home() {
                     <div className="metric-label">Avg. Rating</div>
                   </div>
                 </div>
-              </div>
+              </Card>
               <Card className="col-span-full hover:border-emerald-400/30 transition-colors duration-300">
                 <h3 className="recovery-card-header">Weekly Insights</h3>
                 <p className="recovery-card-content">
