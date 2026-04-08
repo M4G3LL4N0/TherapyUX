@@ -91,10 +91,46 @@ export default function Home() {
                 <p className="recovery-card-content">
                   View your progress trends over time with detailed weekly reports and actionable insights
                 </p>
-                <div className="mt-4 h-48 bg-white/5 rounded-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <span className="text-emerald-400 text-2xl font-medium">+15%</span>
-                    <p className="text-xs text-white/60 mt-1">Recovery Progress</p>
+                <div className="progress-grid mt-6">
+                  <div className="progress-card">
+                    <div className="progress-header">Emotional Balance</div>
+                    <div className="progress-bar">
+                      <div className="progress-bar-fill" style={{ width: '72%' }} />
+                    </div>
+                    <div className="progress-label">
+                      <span>Last Week</span>
+                      <span>72%</span>
+                    </div>
+                  </div>
+                  <div className="progress-card">
+                    <div className="progress-header">Stress Management</div>
+                    <div className="progress-bar">
+                      <div className="progress-bar-fill" style={{ width: '64%' }} />
+                    </div>
+                    <div className="progress-label">
+                      <span>Last Week</span>
+                      <span>64%</span>
+                    </div>
+                  </div>
+                  <div className="progress-card">
+                    <div className="progress-header">Mindfulness</div>
+                    <div className="progress-bar">
+                      <div className="progress-bar-fill" style={{ width: '81%' }} />
+                    </div>
+                    <div className="progress-label">
+                      <span>Last Week</span>
+                      <span>81%</span>
+                    </div>
+                  </div>
+                  <div className="progress-card">
+                    <div className="progress-header">Self-Compassion</div>
+                    <div className="progress-bar">
+                      <div className="progress-bar-fill" style={{ width: '78%' }} />
+                    </div>
+                    <div className="progress-label">
+                      <span>Last Week</span>
+                      <span>78%</span>
+                    </div>
                   </div>
                 </div>
               </div>
