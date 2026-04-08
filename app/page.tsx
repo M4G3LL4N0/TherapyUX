@@ -7,8 +7,8 @@ import { PrivacySection } from "@/components/sections/privacy"
 import { HowItWorksSection } from "@/components/sections/how-it-works"
 import { WaitlistSection } from "@/components/sections/waitlist"
 import { Icons } from "@/components/ui/icons"
-import { Card } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { Card, CardProps } from "@/components/ui/card"
+import { Badge, BadgeProps } from "@/components/ui/badge"
 
 export default function Home() {
   return (
