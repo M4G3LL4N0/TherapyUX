@@ -25,7 +25,7 @@ export default function Home() {
         <div className="relative py-24 glow-effect">
           <div className="container mx-auto px-4">
             <ProductSection />
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="mt-16 dashboard-grid-responsive">
               <div className="recovery-card">
                 <h3 className="recovery-card-header">
                   Daily Insights
@@ -86,7 +86,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="recovery-card dashboard-grid-wide">
+              <div className="recovery-card col-span-full">
                 <h3 className="recovery-card-header">Weekly Insights</h3>
                 <p className="recovery-card-content">
                   View your progress trends over time with detailed weekly reports and actionable insights
@@ -143,14 +143,34 @@ export default function Home() {
         <div className="py-24 bg-gradient-to-b from-black to-emerald-950/10">
           <div className="container mx-auto px-4">
             <HowItWorksSection />
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="mt-16 dashboard-grid-auto">
               <div className="recovery-card">
-                <h3 className="text-xl font-semibold mb-4">Data Security</h3>
-                <p className="text-white/80">End-to-end encryption ensures your privacy</p>
+                <h3 className="recovery-card-header">Data Security</h3>
+                <p className="recovery-card-content">End-to-end encryption ensures your privacy</p>
+                <div className="mt-4">
+                  <div className="flex items-center gap-2 text-sm text-white/80">
+                    <Icons.lock className="h-4 w-4 text-emerald-400" />
+                    <span>256-bit AES Encryption</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-white/80 mt-2">
+                    <Icons.shield className="h-4 w-4 text-emerald-400" />
+                    <span>Zero-Knowledge Architecture</span>
+                  </div>
+                </div>
               </div>
               <div className="recovery-card">
-                <h3 className="text-xl font-semibold mb-4">AI Assistance</h3>
-                <p className="text-white/80">Smart insights tailored to your recovery journey</p>
+                <h3 className="recovery-card-header">AI Assistance</h3>
+                <p className="recovery-card-content">Smart insights tailored to your recovery journey</p>
+                <div className="mt-4">
+                  <div className="flex items-center gap-2 text-sm text-white/80">
+                    <Icons.brain className="h-4 w-4 text-emerald-400" />
+                    <span>Personalized Recommendations</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-white/80 mt-2">
+                    <Icons.chart className="h-4 w-4 text-emerald-400" />
+                    <span>Progress Tracking</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

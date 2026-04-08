@@ -72,6 +72,26 @@ body {
   margin: 0 auto;
 }
 
+.dashboard-grid-auto {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.dashboard-grid-responsive {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+@media (min-width: 768px) {
+  .dashboard-grid-responsive {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .dashboard-grid-responsive {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
+
 .dashboard-grid-sm {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
