@@ -57,8 +57,8 @@ export default function Home() {
                     <div className="metric-label">Clarity</div>
                   </div>
                 </div>
-              </div>
-              <div className="recovery-card">
+              </Card>
+              <Card className="p-6">
                 <h3 className="recovery-card-header">Secure Journaling</h3>
                 <p className="recovery-card-content">Private, encrypted space for your thoughts and reflections with end-to-end encryption</p>
                 <div className="mt-4 h-32 bg-white/5 rounded-lg flex items-center justify-center">
