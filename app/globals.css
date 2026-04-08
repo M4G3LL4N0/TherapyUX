@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #0a0a0f;
@@ -20,17 +22,26 @@
   --space-xxl: calc(5.25 * var(--space-unit));
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary: var(--primary);
-  --color-primary-hover: var(--primary-hover);
-  --color-secondary: var(--secondary);
-  --color-muted: var(--muted);
-  --color-border: var(--border);
-  --color-glass: var(--glass);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@layer base {
+  :root {
+    --background: 10 10 15;
+    --foreground: 240 240 240;
+    --primary: 0 255 159;
+    --primary-hover: 0 230 143;
+    --secondary: 26 26 46;
+    --muted: 160 160 160;
+    --border: 255 255 255 / 0.08;
+    --glass: 255 255 255 / 0.03;
+    
+    --space-unit: 1rem;
+    --space-xxs: calc(0.25 * var(--space-unit));
+    --space-xs: calc(0.5 * var(--space-unit));
+    --space-sm: calc(0.75 * var(--space-unit));
+    --space-md: calc(1.25 * var(--space-unit));
+    --space-lg: calc(2 * var(--space-unit));
+    --space-xl: calc(3.25 * var(--space-unit));
+    --space-xxl: calc(5.25 * var(--space-unit));
+  }
 }
 
 body {
