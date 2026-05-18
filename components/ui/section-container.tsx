@@ -1,8 +1,6 @@
 import * as React from "react"
 
-type SectionContainerProps = React.HTMLAttributes<HTMLElement> & {
-  children: React.ReactNode
-}
+type SectionContainerProps = React.ComponentPropsWithoutRef<"section">
 
 export function SectionContainer({
   children,

@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --background: #0a0a0f;
-  --foreground: #f0f0f0;
-  --primary: #00ff9f;
-  --primary-hover: #00e68f;
-  --secondary: #1a1a2e;
-  --muted: #a0a0a0;
+  --background: #06080f;
+  --foreground: #f1f5f9;
+  --primary: #34d399;
+  --primary-hover: #2dd4bf;
+  --secondary: #121826;
+  --muted: #94a3b8;
   --border: rgba(255, 255, 255, 0.08);
-  --glass: rgba(255, 255, 255, 0.03);
-  --glow: radial-gradient(ellipse at center, rgba(0, 255, 159, 0.1) 0%, transparent 70%);
+  --glass: rgba(255, 255, 255, 0.045);
+  --glow: radial-gradient(ellipse at center, rgba(52, 211, 153, 0.12) 0%, transparent 70%);
   --space-unit: 1rem;
   --space-xxs: calc(0.25 * var(--space-unit));
   --space-xs: calc(0.5 * var(--space-unit));
@@ -24,15 +24,6 @@
 
 @layer base {
   :root {
-    --background: 10 10 15;
-    --foreground: 240 240 240;
-    --primary: 0 255 159;
-    --primary-hover: 0 230 143;
-    --secondary: 26 26 46;
-    --muted: 160 160 160;
-    --border: 255 255 255 / 0.08;
-    --glass: 255 255 255 / 0.03;
-    
     --space-unit: 1rem;
     --space-xxs: calc(0.25 * var(--space-unit));
     --space-xs: calc(0.5 * var(--space-unit));
@@ -44,12 +35,48 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+  background-color: var(--background);
+}
+
 body {
-  background: var(--background);
+  position: relative;
+  overflow-x: hidden;
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -2;
+  background:
+    radial-gradient(900px circle at 12% -10%, rgba(52, 211, 153, 0.12), transparent 52%),
+    radial-gradient(720px circle at 88% 10%, rgba(45, 212, 191, 0.08), transparent 48%),
+    radial-gradient(640px circle at 50% 100%, rgba(15, 23, 42, 0.9), transparent 45%),
+    linear-gradient(180deg, #06080f 0%, #0a0f1a 55%, #050608 100%);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.22;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+  background-size: 68px 68px;
+  mask-image: radial-gradient(ellipse 82% 55% at 50% -5%, black 0%, transparent 72%);
 }
 
 ::selection {
@@ -123,7 +150,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, rgba(0, 255, 159, 0.05) 0%, transparent 70%);
+  background: radial-gradient(circle at center, rgba(52, 211, 153, 0.07) 0%, transparent 70%);
   opacity: 0;
   transition: opacity 0.2s ease;
   z-index: -1;
@@ -135,7 +162,7 @@ body {
 
 .recovery-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(0, 255, 159, 0.1);
+  box-shadow: 0 4px 20px rgba(52, 211, 153, 0.12);
   animation: card-pulse 1.5s ease-in-out infinite;
 }
 
@@ -307,4 +334,48 @@ body {
 
 .float-animation {
   animation: float 6s ease-in-out infinite;
+}
+
+@keyframes noaerth-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.motion-fade-up {
+  animation: noaerth-fade-up 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-fade-up {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .float-animation {
+    animation: none !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(6, 8, 15, 0.95);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(52, 211, 153, 0.38);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(45, 212, 191, 0.55);
 }

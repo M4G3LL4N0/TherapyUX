@@ -1,5 +1,6 @@
+import { SubpageVisual } from "@/components/SubpageVisual";
 import { notFound } from "next/navigation"
-import { mockSessions } from "@/types/session"
+import { mockSessions } from "@/lib/mock-sessions"
 import { SessionDetail } from "@/components/sessions/session-detail"
 
 export default function SessionPage({
@@ -14,8 +15,11 @@ export default function SessionPage({
   }
 
   return (
-    <div className="space-y-6">
+    <>
+    <SubpageVisual variant="default" />
+      <div className="space-y-6">
       <SessionDetail session={session} />
     </div>
+  </>
   )
 }

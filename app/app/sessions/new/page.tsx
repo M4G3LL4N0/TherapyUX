@@ -1,3 +1,4 @@
+import { SubpageVisual } from "@/components/SubpageVisual";
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
@@ -5,7 +6,9 @@ import { Icons } from "@/components/ui/icons"
 
 export default function NewSessionPage() {
   return (
-    <div className="space-y-6">
+    <>
+    <SubpageVisual variant="default" />
+      <div className="space-y-6">
       <div>
         <h1 className="text-2xl font-semibold">New Session</h1>
         <p className="text-sm text-white/80">
@@ -60,5 +63,6 @@ export default function NewSessionPage() {
         </Card>
       </div>
     </div>
+  </>
   )
 }

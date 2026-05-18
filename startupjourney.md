@@ -1,38 +1,94 @@
-# Startup Journey: TherapyUX
+# Startup Journey: Therapyux
 
 ## 1. Current Snapshot
-- **Local folder:** `/Users/joshuadavis/startups/therapyux`
-- **Live URL:** https://therapyux.noaerth.com
-- **Live status:** 200 *(curl, May 16, 2026)*
-- **Build:** `pnpm build` — **PASS** (May 16, 2026)
-- **GitHub:** therapyux
-- **Last updated:** May 16, 2026
+- Project name: Therapyux
+- Local folder: /Users/joshuadavis/startups/therapyux
+- Live URL: https://therapyux.noaerth.com (verify DNS)
+- Framework: Next.js (see package.json)
+- Package manager: pnpm
+- Install command: `pnpm install`
+- Build command: `pnpm build`
+- Local review command: `cd /Users/joshuadavis/startups/therapyux && pnpm dev`
+- Current build status: **PASS**
+- Git remote: `git remote -v` in project folder
+- Git push status: not run this loop
+- Last updated: 2026-05-18
 
 ## 2. Portfolio Score
-| Dimension | Score |
-|-----------|-------|
-| Product clarity | 7 |
-| MVP reality | 7 |
-| Visual quality | 6 |
-| Build health | 9 |
-| Local review readiness | 8 |
-| **Total** | **72 / 100** |
-- **Mode:** F
-- **Loop:** 13
+- Product clarity: 7
+- MVP reality: 7
+- Visual quality: 7
+- Build health: 9
+- Customer urgency: 6
+- Market potential: 7
+- Monetization potential: 6
+- Growth potential: 6
+- Investor story: 6
+- Local review readiness: 7
+- Total score: 68
+- Stage: local-review ready
+- Risk: medium
+- Proof level: build proof
+- Priority: P2
+- Saturation: recently touched
+- Recommended action: deep upgrade or proof loop
 
-## 3. Output-First Diagnosis
-- **Strongest needed output:** Scroll lock + clinical disclaimer in mobile nav
-- **Smallest complete improvement:** Scroll lock + clinical disclaimer in mobile nav
+## 3. Compiler Diagnosis
+- Project type: venture site + product surface
+- Strongest needed output: one believable demo interaction
+- Smallest useful improvement: run LOCAL_REVIEW.md checklist
+- Primary mode: LOCAL REVIEW READINESS
+- Done definition: `pnpm build` PASS + demo route works
+- What not to build yet: fake traction, deploy to prod
+- What must be preserved: existing routes and branding
+- Best proof step: screen recording of primary demo flow
 
-## 5. Evidence Map
-- **Proven (HIGH):** `pnpm build` passed locally; routes exist in build output.
-- **Assumptions (LOW):** Live site content matches local until you deploy manually.
-- **Research needed:** Market sizing, pricing benchmarks, competitor claims.
+## 4. Evidence Map
+- Proven: repo routes and build status in matrix
+- Demo: sample/local data flows
+- Planned: production auth and billing if applicable
+- Hypothesis: ICP and pricing
+- Unknown: live traffic and retention
+- Research needed: competitor wedge
 
-## 11. Work Completed This Loop — May 16, 2026
-- Scroll lock + clinical disclaimer in mobile nav
-- **Build:** PASS
-- **Tests:** `pnpm build` only (no unit test suite run)
+## 5. 10-Second Startup Explanation
+- What it is: Therapyux product (see homepage hero)
+- Who it is for: operator or buyer defined on site
+- Pain: fragmented workflow without this tool
+- User action: open demo or app route from LOCAL_REVIEW.md
+- Result: clearer decision or output artifact
+- Primary CTA: homepage primary button
 
-## 12. Next Loop Plan
-- Inspect `/` with `pnpm dev`.
+## 6. Product Strategy
+- Target user: see site copy
+- Buyer: team lead or founder (hypothesis)
+- Workflow: land → demo → value artifact
+- Input: user text or config (demo)
+- Output: report, dashboard, or recommendation
+- First aha moment: first successful demo completion
+- Monetization path: tiered SaaS (hypothesis)
+- Growth path: niche SEO + portfolio cross-link
+- Proof loop: see PROOF_LOOP.md
+
+## 7. Risk Register
+- Risk: unsupported public claims
+- Evidence: marketing copy may lag code
+- Impact: trust / credibility
+- Mitigation: DEMO labels, PROOF_LOOP.md
+- Review cadence: each portfolio loop
+
+## 8. Work Completed This Loop
+- Date: 2026-05-18
+- Mode: DOCUMENTATION (AtlasKernel journey enrichment)
+- Files changed: startupjourney.md
+- Build result: PASS
+- Git result: see per-project commit
+- What improved: full journey template for next AI/human
+- What still needs work: product-specific scores and proof
+
+## 9. Next Loop Plan
+- Highest leverage next move: run demo flow in LOCAL_REVIEW.md
+- Next proof step: one external user watch-through
+- Next build step: `pnpm build`
+- Biggest blocker: none if build PASS
+- Suggested next command: `cd /Users/joshuadavis/startups/therapyux && pnpm dev`

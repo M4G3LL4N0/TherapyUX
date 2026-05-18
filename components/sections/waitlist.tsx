@@ -40,7 +40,10 @@ export function WaitlistSection() {
   }
 
   return (
-    <SectionContainer className="bg-black/50 backdrop-blur-lg border border-white/10 rounded-xl p-8">
+    <SectionContainer
+      id="waitlist"
+      className="rounded-3xl border border-white/10 bg-black/50 p-8 backdrop-blur-lg"
+    >
       <div className="max-w-xl mx-auto text-center">
         <h2 className="text-3xl font-semibold tracking-tight mb-4">
           Join the Waitlist

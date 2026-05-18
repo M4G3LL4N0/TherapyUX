@@ -1,6 +1,8 @@
+import { SubpageVisual } from "@/components/SubpageVisual";
 export default function OBX1Page() {
   return (
     <main className="min-h-screen bg-black px-6 py-16 text-white">
+      <SubpageVisual variant="default" />
       <div className="mx-auto max-w-5xl">
         <p className="text-sm uppercase tracking-[0.2em] text-emerald-300">
           System

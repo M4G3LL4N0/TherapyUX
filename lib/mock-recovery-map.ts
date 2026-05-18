@@ -5,7 +5,7 @@ import type {
   RecoveryFocus,
 } from "@/types/recovery-map"
 
-const recoveryMetricsRaw = [
+export const mockRecoveryMetrics: RecoveryMetric[] = [
   {
     id: "self-trust",
     label: "Self-Trust",
@@ -29,7 +29,7 @@ const recoveryMetricsRaw = [
   },
 ]
 
-const triggerClustersRaw = [
+export const mockTriggerClusters: TriggerCluster[] = [
   {
     id: "uncertainty",
     theme: "Uncertainty + Silence",
@@ -53,44 +53,29 @@ const triggerClustersRaw = [
   },
 ]
 
-const recoveryPatternsRaw = [
+export const mockRecoveryPatterns: RecoveryPattern[] = [
   {
-    id: "pattern-1", 
+    id: "pattern-1",
     title: "Faster stabilization",
     description: "Returning to baseline quicker",
-    trending: "up",
-    dataPoints: 12
+    trend: "up",
   },
   {
     id: "pattern-2",
-    title: "Less catastrophic thinking", 
+    title: "Less catastrophic thinking",
     description: "Negative interpretation loops are losing intensity",
-    trending: "up",
-    dataPoints: 8
+    trend: "up",
   },
   {
     id: "pattern-3",
     title: "Relationship sensitivity",
     description: "Attachment triggers still create instability",
-    trending: "down", 
-    dataPoints: 15
-  }
+    trend: "down",
+  },
 ]
 
-const recoveryFocusRaw = {
+export const mockRecoveryFocus: RecoveryFocus = {
   area: "Attachment-trigger recovery",
   recommendation: "Use Night Spiral before reacting.",
   description: "Reduce urgency after ambiguous social cues.",
 }
-
-export const mockRecoveryMetrics =
-  recoveryMetricsRaw as unknown as RecoveryMetric[]
-
-export const mockTriggerClusters =
-  triggerClustersRaw as unknown as TriggerCluster[]
-
-export const mockRecoveryPatterns =
-  recoveryPatternsRaw as unknown as RecoveryPattern[]
-
-export const mockRecoveryFocus =
-  recoveryFocusRaw as unknown as RecoveryFocus

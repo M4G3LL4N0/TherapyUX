@@ -1,28 +1,13 @@
 import { Card } from "@/components/ui/card"
+import type { RecoveryFocus } from "@/types/recovery-map"
 
-function readString(value: unknown, fallback = "") {
-  return typeof value === "string" ? value : fallback
-}
-
-export function RecoveryFocusCard({ focus }: { focus: unknown }) {
-  const data = (focus ?? {}) as Record<string, unknown>
-
-  const title =
-    readString(data.title) ||
-    readString(data.area) ||
-    readString(data.label) ||
-    "Recommended next focus"
-
+export function RecoveryFocusCard({ focus }: { focus: RecoveryFocus }) {
+  const title = focus.area
   const description =
-    readString(data.description) ||
-    readString(data.summary) ||
-    readString(data.detail) ||
+    focus.description ??
     "This is the next highest-leverage area for improving recovery."
-
   const recommendation =
-    readString(data.recommendation) ||
-    readString(data.action) ||
-    readString(data.nextStep) ||
+    focus.recommendation ??
     "Continue with the suggested protocol and monitor pattern changes."
 
   return (

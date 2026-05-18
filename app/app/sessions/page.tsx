@@ -1,6 +1,7 @@
+import { SubpageVisual } from "@/components/SubpageVisual";
 import { Card } from "@/components/ui/card"
 import { Icons } from "@/components/ui/icons"
-import { mockSessions } from "@/types/session"
+import { mockSessions } from "@/lib/mock-sessions"
 import Link from "next/link"
 import { EmptyState } from "@/components/sessions/empty-state"
 import { SessionCard } from "@/components/sessions/session-card"
@@ -8,7 +9,9 @@ import { Button } from "@/components/ui/button"
 
 export default function SessionsPage() {
   return (
-    <div className="space-y-6">
+    <>
+    <SubpageVisual variant="default" />
+      <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-semibold">Session History</h1>
@@ -36,5 +39,6 @@ export default function SessionsPage() {
         </Card>
       )}
     </div>
+  </>
   )
 }

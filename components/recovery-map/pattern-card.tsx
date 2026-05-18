@@ -1,34 +1,10 @@
 import { Icons } from "@/components/ui/icons"
+import type { RecoveryPattern } from "@/types/recovery-map"
 
-function readString(value: unknown, fallback = "") {
-  return typeof value === "string" ? value : fallback
-}
-
-export function RecoveryPatternCard({ pattern }: { pattern: unknown }) {
-  const data = (pattern ?? {}) as Record<string, unknown>
-
-  const direction =
-    readString(data.trend) ||
-    readString(data.direction) ||
-    (typeof data.positive === "boolean"
-      ? data.positive
-        ? "up"
-        : "down"
-      : "")
-
-  const isPositive = direction === "up" || direction === "positive"
-
-  const title =
-    readString(data.title) ||
-    readString(data.name) ||
-    readString(data.label) ||
-    "Recovery pattern"
-
-  const description =
-    readString(data.description) ||
-    readString(data.summary) ||
-    readString(data.detail) ||
-    "Pattern insight unavailable."
+export function RecoveryPatternCard({ pattern }: { pattern: RecoveryPattern }) {
+  const isPositive = pattern.trend === "up"
+  const title = pattern.title
+  const description = pattern.description
 
   return (
     <li className="flex items-start gap-4">
