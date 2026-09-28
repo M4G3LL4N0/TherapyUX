@@ -13,8 +13,8 @@ export function HowItWorksSection() {
             A recovery OS, not a chatbot
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-white/65">
-            Capture a trigger, run a structured protocol, and build pattern
-            intelligence over time—without diagnosis claims or generic advice.
+            Name the moment, separate facts from fear, and keep a private map of
+            what helped. A concept for layout and language—not a treatment protocol.
           </p>
         </div>
 
@@ -27,8 +27,8 @@ export function HowItWorksSection() {
               Stabilize first
             </h3>
             <p className="mt-2 text-sm leading-6 text-white/65">
-              Short, decisive interventions for panic, shame spirals, and
-              overthinking—focused on getting you back to baseline.
+              Slow the moment down: name the trigger, wait before acting, and
+              keep the next step small. Educational framing only.
             </p>
           </Card>
 

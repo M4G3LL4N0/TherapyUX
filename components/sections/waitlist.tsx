@@ -1,116 +1,18 @@
-'use client'
-
-import { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import { SectionContainer } from '@/components/ui/section-container'
-import { Icons } from '@/components/ui/icons'
-import { cn } from '@/lib/utils'
+import { Button } from "@/components/ui/button"
+import { SectionContainer } from "@/components/ui/section-container"
 
 export function WaitlistSection() {
-  const [email, setEmail] = useState('')
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
-  const [error, setError] = useState('')
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setStatus('loading')
-    setError('')
-
-    try {
-      const res = await fetch('/api/waitlist', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ email })
-      })
-
-      const data = await res.json()
-
-      if (!res.ok) {
-        throw new Error(data.error || 'Failed to join waitlist')
-      }
-
-      setStatus('success')
-      setEmail('')
-    } catch (err) {
-      setStatus('error')
-      setError(err instanceof Error ? err.message : 'Unknown error occurred')
-    }
-  }
-
   return (
     <SectionContainer
       id="waitlist"
       className="rounded-3xl border border-white/10 bg-black/50 p-8 backdrop-blur-lg"
     >
-      <div className="max-w-xl mx-auto text-center">
-        <h2 className="text-3xl font-semibold tracking-tight mb-4">
-          Join the Waitlist
-        </h2>
-        <p className="text-white/80 mb-6">
-          Be the first to try TherapyUX when we launch.
+      <div className="mx-auto max-w-xl text-center">
+        <h2 className="mb-4 text-3xl font-semibold tracking-tight">Join the waitlist</h2>
+        <p className="mb-6 text-white/80">
+          Early access for a privacy-first recovery workspace concept. Not medical care.
         </p>
-
-        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
-          <div className="relative flex-1">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
-              className={cn(
-                "flex-1 w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm",
-                "focus:outline-none focus:ring-2 focus:ring-emerald-500/30",
-                "placeholder:text-white/30",
-                status === 'error' && "border-rose-400/30",
-                status === 'success' && "border-emerald-400/30"
-              )}
-              required
-              disabled={status !== 'idle'}
-            />
-            {status === 'error' && (
-              <Icons.emergency className="absolute right-3 top-3 h-4 w-4 text-rose-400" />
-            )}
-            {status === 'success' && (
-              <Icons.check className="absolute right-3 top-3 h-4 w-4 text-emerald-400" />
-            )}
-          </div>
-          <Button
-            type="submit"
-            variant="solid"
-            size="lg"
-            disabled={status === 'loading' || status === 'success'}
-          >
-            {status === 'loading' ? (
-              <>
-                <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
-                Securing spot...
-              </>
-            ) : status === 'success' ? 'Access Granted' : 'Join Waitlist'}
-          </Button>
-        </form>
-
-        {status === 'error' && (
-          <p className="mt-2 text-sm text-rose-400">
-            Failed to join waitlist. Please try again.
-          </p>
-        )}
-
-        {status === 'success' && (
-          <div className="mt-4 space-y-2">
-            <p className="text-emerald-400 font-medium">
-              You're in. Early access is rolling out.
-            </p>
-            <p className="text-xs text-white/50">
-              We'll contact you as we onboard new cohorts. Thank you for believing in TherapyUX.
-            </p>
-          </div>
-        )}
-
-        {status === 'error' && (
-          <p className="mt-4 text-rose-400 text-sm">{error}</p>
-        )}
+        <Button href="/waitlist">Open waitlist</Button>
       </div>
     </SectionContainer>
   )

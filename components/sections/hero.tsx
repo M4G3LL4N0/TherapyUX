@@ -18,33 +18,23 @@ export function HeroSection() {
         </h1>
 
         <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-white/65">
-          TherapyUX is a privacy-first operating system for triggers, shame,
-          panic, overthinking, and attachment spirals—designed to help you
-          stabilize faster and learn your patterns without turning your inner
-          life into someone else's dataset.
+          TherapyUX is a design concept for a calmer recovery workspace—modes,
+          pattern maps, and private session layout. It is not medical care, not
+          a clinic, and not a replacement for licensed treatment.
         </p>
 
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Button
-            asChild
-            className="rounded-full bg-gradient-to-r from-emerald-300 to-teal-300 px-8 text-slate-950 shadow-[0_14px_48px_rgba(52,211,153,0.28)] hover:from-emerald-200 hover:to-teal-200"
-            size="lg"
-          >
-            <a href="#waitlist">Join Waitlist</a>
+          <Button href="/waitlist" className="rounded-full px-8">
+            Join waitlist
           </Button>
-
-          <Button
-            variant="outline"
-            className="group rounded-full border-white/18 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-md hover:bg-white/10"
-            size="lg"
-            asChild
-          >
-            <a href="#how-it-works" className="inline-flex items-center gap-2">
-              How It Works
-              <Icons.chevronRight className="h-4 w-4 opacity-60 transition group-hover:opacity-100" />
-            </a>
+          <Button href="/modes" variant="secondary" className="rounded-full px-8">
+            Preview modes
+            <Icons.chevronRight className="ml-2 h-4 w-4 opacity-60" />
           </Button>
         </div>
+        <p className="mx-auto mt-8 max-w-2xl text-sm leading-7 text-white/45">
+          This public page describes a product concept. TherapyUX does not diagnose, treat, or provide crisis care.
+        </p>
       </div>
     </SectionContainer>
   )
